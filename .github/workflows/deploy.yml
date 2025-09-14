@@ -22,9 +22,9 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Build website
-  build:
-    if: github.repository_owner != 'HugoBlox'
+  # Build and Deploy
+  build-and-deploy:
+    if: github.repository_owner != 'HugoBlox' # Safety check from theme
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -32,6 +32,7 @@ jobs:
         with:
           # Fetch history for Hugo's .GitInfo and .Lastmod
           fetch-depth: 0
+          submodules: 'recursive' # Fetch the theme
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -56,7 +57,7 @@ jobs:
           hugo-version: ${{ env.WC_HUGO_VERSION }}
           extended: true
 
-      # Cache dependencies (Go modules, node_modules) - stable, rarely changes
+      # Caching steps are kept for performance
       - uses: actions/cache@v4
         with:
           path: |
@@ -67,7 +68,6 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-hugo-deps-
 
-      # Cache Hugo resources (processed images, CSS) - invalidates only when assets/config change
       - uses: actions/cache@v4
         with:
           path: resources/
@@ -75,16 +75,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-hugo-resources-
 
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v5
-
       - name: Build with Hugo
         env:
           HUGO_ENVIRONMENT: production
-        run: |
-          echo "Hugo Cache Dir: $(hugo config | grep cachedir)"
-          hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+        # Build the site but do NOT set a baseURL. Hugo's config will handle it.
+        run: hugo --minify
 
       - name: Generate Pagefind search index (if applicable)
         run: |
@@ -93,25 +88,17 @@ jobs:
             pnpm dlx pagefind --source "public" || npx pagefind --source "public"
           fi
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
+      # --- This is the new deployment step ---
+      - name: Deploy to your live site repo
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          path: ./public
-
-  # Deploy website to GitHub Pages hosting
-  deploy:
-    if: github.repository_owner != 'HugoBlox'
-    needs: build
-    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
-    permissions:
-      pages: write # to deploy to Pages
-      id-token: write # to verify the deployment originates from an appropriate source
-    # Deploy to the github-pages environment
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          # The secret containing the private SSH key
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          # The repository to deploy to
+          external_repository: JoeXuXXL/xiangling-xu.github.io # <-- CHANGE THIS
+          # The branch to publish to. For user pages, it must be `main` or `master`.
+          publish_branch: main
+          # The folder in this repo that contains the built site
+          publish_dir: ./public
+          # A commit message for the deployment
+          commit_message: ${{ github.event.head_commit.message }}
