@@ -54,8 +54,8 @@ interests:
 education:
   - area: PhD Infomatique
     institution: Inria Paris-Saclay & Institut polytechnique de Paris
-    date_start: 2020-10-01
-    date_end: Now
+    date_start: 2023-10-01
+    date_end:
     # summary: |
     #   Thesis on _Scaling Laws for Neural Language Models_. Supervised by Prof. Andrew Ng. Published 5 papers in NeurIPS and ICML, with 2 best paper awards.
     # button:
