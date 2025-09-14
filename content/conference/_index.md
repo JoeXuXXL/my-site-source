@@ -1,5 +1,6 @@
 ---
 title: Recent & Upcoming Talks
+type: page
 cms_exclude: true
 #url: talk
 

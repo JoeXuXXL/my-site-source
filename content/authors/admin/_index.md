@@ -53,7 +53,7 @@ interests:
 
 education:
   - area: PhD Infomatique
-    institution: Inria Paris-Saclay & Institut polytechnique de Paris
+    institution: Inria Paris-Saclay & Institut polytechnique de Paris, France
     date_start: 2023-10-01
     date_end: ''
     # summary: |
@@ -62,7 +62,7 @@ education:
     #   text: 'Read Thesis'
     #   url: 'https://example.com/thesis.pdf'
   - area: MSc Mathematics
-    institution: ETH Zürich
+    institution: ETH Zürich, Switzerland
     date_start: 2020-09-15
     date_end: 2023-06-03
     # summary: |
@@ -70,7 +70,7 @@ education:
 
     #   Specialized in machine learning and robotics.
   - area: BSc Mathematics and Physics
-    institution: University of Toronto
+    institution: University of Toronto, Canada
     date_start: 2016-09-01
     date_end: 2020-05-31
     # summary: |
