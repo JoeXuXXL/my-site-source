@@ -14,8 +14,8 @@ marketing:
     site_type: Person
     local_business_type: ''
     org_name: ''
-    description: 'The highly-customizable Hugo Academic theme powered by Hugo Blox Builder. Easily create your personal academic website.'
-    twitter: 'GetResearchDev'
+    description: 'Website of Xiangling Xu 许湘灵, a PhD student at Inria Paris-Saclay specializing in quantum information, operator algebras, and noncommutative polynomial optimization.'
+    twitter: ''
   analytics:
     google_analytics: ''
     baidu_tongji: ''
@@ -23,8 +23,8 @@ marketing:
     fathom: ''
     pirsch: ''
   verification:
-    google: ''
-    baidu: ''
+    google: '<zA7dItn8ZqZZqmcOeec-vCEOBD0h-fdoVNuu3OE5MJk/>'
+    baidu: '903f797a4cf1ce585155bf386aafdce3'
 
 # Site header
 header:
