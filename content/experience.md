@@ -1,35 +1,30 @@
 ---
-title: 'Experience'
-date: 2023-10-24
+title: "Experience"
 type: landing
 
-design:
-  spacing: '5rem'
-
-# Note: `username` refers to the user's folder name in `content/authors/`
-
-# Page sections
-sections:
-  - block: resume-experience
+blocks:
+  - block: experience
     content:
+      # Pulls items from content/authors/<username>/
       username: admin
     design:
-      # Hugo date format
-      date_format: 'January 2006'
-      # Education or Experience section first?
+      date_format: "January 2006"
       is_education_first: false
-  - block: resume-skills
+
+  - block: skills
     content:
-      title: Skills & Hobbies
+      title: "Skills & Hobbies"
       username: admin
     design:
       show_skill_percentage: false
-  - block: resume-awards
+
+  - block: achievements
     content:
-      title: Awards
+      title: "Awards"
       username: admin
-  - block: resume-languages
+
+  - block: languages
     content:
-      title: Languages
+      title: "Languages"
       username: admin
 ---
