@@ -1,0 +1,78 @@
+# This is the configuration for Decap CMS
+
+backend:
+  name: github
+  # IMPORTANT: Change this to your source repository
+  repo: xiangling-xu/my-site-source # e.g., xiangling-xu/academic-website
+  branch: main # or master
+
+# This is where your images will be uploaded
+media_folder: "assets/media/"
+# This is how the link to your images will be formatted in your content
+public_folder: "/media/"
+
+# These are the content types that you want to be able to edit in the CMS
+collections:
+  # Collection for Blog Posts
+  - name: "post" # Used in routes, e.g., /admin/#/collections/post
+    label: "Blog Posts" # Used in the UI
+    folder: "content/post" # The folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template
+    fields: # The fields for each document, usually in front matter
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Tags", name: "tags", widget: "list", required: false }
+      - { label: "Summary", name: "summary", widget: "text", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # Collection for Publications
+  - name: "publication"
+    label: "Publications"
+    folder: "content/publication"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Authors", name: "authors", widget: "list" }
+      - { label: "Publication Date", name: "date", widget: "datetime" }
+      - { label: "Publication Type", name: "publication_types", widget: "select", options: ["Uncategorized", "Conference paper", "Journal article", "Preprint", "Report", "Book", "Book section", "Thesis", "Patent"] }
+      - { label: "Publication Short Name", name: "publication", widget: "string", required: false, hint: "e.g., In *ICLR 2024*." }
+      - { label: "Abstract", name: "abstract", widget: "markdown", required: false }
+      - { label: "URL to PDF", name: "url_pdf", widget: "string", required: false }
+      - { label: "URL to Project", name: "url_project", widget: "string", required: false }
+collections:
+  - name: "author"
+    label: "CV / Biography"
+    files:
+      - label: "Main Biography Page"
+        name: "bio"
+        file: "content/authors/admin/_index.md"
+        fields:
+          # ... fields for the bio page```
+...to this (notice the new `- name: "homepage"` section):
+```yaml
+# ... (backend and media_folder settings)
+collections:
+  - name: "author"
+    label: "CV / Biography"
+    files:
+      - label: "Main Biography Page"
+        name: "bio"
+        file: "content/authors/admin/_index.md"
+        fields:
+          # ... fields for the bio page
+
+  - name: "homepage" # A new collection for homepage sections
+    label: "Homepage Sections"
+    files:
+      - label: "About Widget" # The name that will appear in the CMS
+        name: "about"
+        file: "content/home/about.md" # The file this entry will edit
+        fields:
+          # Define the fields you want to edit from that file
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Content", name: "body", widget: "markdown" }
+
+  # You can add more collections here for Talks, Projects, etc.
+  # by copying the structure above and changing the folder and fields.
