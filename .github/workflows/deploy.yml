@@ -95,7 +95,7 @@ jobs:
           # The secret containing the private SSH key
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           # The repository to deploy to
-          external_repository: JoeXuXXL/xiangling-xu.github.io # <-- CHANGE THIS
+          external_repository: xiangling-xu/xiangling-xu.github.io # <-- CHANGE THIS
           # The branch to publish to. For user pages, it must be `main` or `master`.
           publish_branch: main
           # The folder in this repo that contains the built site
