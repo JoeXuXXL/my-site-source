@@ -107,7 +107,7 @@ skills:
         icon: code-bracket
       - name: Machine Learning
         description: ''
-         percent: 100 
+        percent: 100 
         icon: chart-bar
       - name: Cloud Computing (AWS/GCP)
         description: ''
