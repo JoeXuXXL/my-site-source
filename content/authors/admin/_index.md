@@ -178,3 +178,9 @@ education:
 #     summary: |
 #       Recognized for contributions to scaling laws in deep learning.
 ---
+
+I am a **mathematical physicist** working in quantum information theory and quantum foundations.
+
+My research focuses on quantum network correlations, many-body physics, quantum cryptography, and related topics in quantum mechanics, using tools from operator algebras and noncommutative polynomial optimization. 
+
+Since October 2023, I have been a PhD student with the PhiQus team at Inria Paris-Saclay. Feel free to reach me at xu[dot]xiangling[at]inria[dot]fr.
