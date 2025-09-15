@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Xiangling Xu 许湘灵
+title: '<span class="whitespace-nowrap">Xiangling Xu</span><br><span class="whitespace-nowrap">许湘灵</span>'
 
 # Name pronunciation (optional)
 name_pronunciation: ''

@@ -34,21 +34,21 @@ sections:
       title: "Education"
       items:
         - title: "PhD Infomatique"
-          institution: "Inria Paris-Saclay & Institut Polytechnique de Paris"
+          company: "Inria Paris-Saclay & Institut Polytechnique de Paris"
           location: "France"
           date_start: "2023-10-01"
           date_end: ""
           description: |
             Supervised by Prof. Marc-Olivier Renou
         - title: "MSc Mathematics"
-          institution: "Eidgenössische Technische Hochschule (ETH) Zürich"
+          company: "Eidgenössische Technische Hochschule (ETH) Zürich"
           location: "Switzerland"
           date_start: "2020-09-15"
           date_end: "2023-06-03"
           # description: |
           #   [Thesis]()
         - title: "BSc Mathematics and Physics"
-          institution: "University of Toronto"
+          company: "University of Toronto"
           location: "Canada"
           date_start: "2016-09-01"
           date_end: "2020-05-31"
