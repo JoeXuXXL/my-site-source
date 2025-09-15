@@ -56,7 +56,6 @@ sections:
           #   (Thesis)[]
     design:
       columns: "1"
----
   # - block: markdown
   #   content:
   #     title: 'About me'
