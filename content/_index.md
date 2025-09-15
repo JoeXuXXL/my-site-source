@@ -31,26 +31,27 @@ sections:
         shape: circle # Options: circle (default), square, rounded
   - block: resume-experience
     content:
+      username: admin
       title: "Education"
-      items:
-        - title: "PhD Infomatique"
-          Institution: "Inria Paris-Saclay & Institut Polytechnique de Paris"
-          location: "France"
-          date_start: "2023-10-01"
-          date_end: ""
-          description: |
-            Supervised by Prof. Marc-Olivier Renou
-        - title: "MSc Mathematics"
-          Institution: "Eidgenössische Technische Hochschule (ETH) Zürich"
-          location: "Switzerland"
-          date_start: "2020-09-15"
-          date_end: "2023-06-03"
-          # description: |
-          #   (Thesis)[]
-        - title: "BSc Mathematics and Physics"
-          Institution: "University of Toronto"
-          location: "Canada"
-          date_start: "2016-09-01"
+      # items:
+      #   - title: "PhD Infomatique"
+      #     Institution: "Inria Paris-Saclay & Institut Polytechnique de Paris"
+      #     location: "France"
+      #     date_start: "2023-10-01"
+      #     date_end: ""
+      #     description: |
+      #       Supervised by Prof. Marc-Olivier Renou
+      #   - title: "MSc Mathematics"
+      #     Institution: "Eidgenössische Technische Hochschule (ETH) Zürich"
+      #     location: "Switzerland"
+      #     date_start: "2020-09-15"
+      #     date_end: "2023-06-03"
+      #     # description: |
+      #     #   (Thesis)[]
+      #   - title: "BSc Mathematics and Physics"
+      #     Institution: "University of Toronto"
+      #     location: "Canada"
+      #     date_start: "2016-09-01"
           date_end: "2020-05-31"
           # description: |
           #   (Thesis)[]

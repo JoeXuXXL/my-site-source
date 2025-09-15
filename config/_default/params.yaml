@@ -49,8 +49,8 @@ footer:
 
 # Localization
 locale:
-  date_format: 'Jan 2, 2006'
-  time_format: '3:04 PM'
+  date_format: '02/01/2006' # US: '01/02/2006' | UK: '02/01/2006'
+  time_format: '15:04 MST'
 
 # Site features
 features:
@@ -62,14 +62,14 @@ features:
 
 # In config/_default/params.yaml
 
-publications:
-  # A list of author names to highlight in publications
-  highlight_authors:
-    - Xiangling Xu
-    - Xu, Xiangling
-    - X Xu
-    - X. Xu
-    - 许湘灵
+# publications:
+#   # A list of author names to highlight in publications
+#   highlight_authors:
+#     - Xiangling Xu
+#     - Xu, Xiangling
+#     - X Xu
+#     - X. Xu
+#     - 许湘灵
 
 # social:
 #   - icon: envelope # at-symbol
