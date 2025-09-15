@@ -23,3 +23,15 @@
   transform: translateY(-2px);
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
+
+ol.reversed {
+  list-style-type: none;
+  counter-reset: item ($total + 1); // Initialize counter with total count + 1
+  li {
+    counter-increment: item -1; // Decrement counter
+    &::before {
+      content: counter(item) ". ";
+      margin-right: 0.5em;
+    }
+  }
+}
