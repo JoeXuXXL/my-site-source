@@ -17,7 +17,7 @@ main:
     url: /post/
     weight: 13
   - name: CV
-    url: static/CV_phdphase.pdf
+    url: uploads/CV_phdphase.pdf
     weight: 40
   # - name: Experience
   #   url: experience/

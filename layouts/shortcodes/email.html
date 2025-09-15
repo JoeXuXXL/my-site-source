@@ -1,0 +1,5 @@
+{{ $email := .Get 0 }}
+{{ $parts := split $email "@" }}
+{{ $user := index $parts 0 }}
+{{ $domain := index $parts 1 }}
+<span class="obfuscated-email" data-user="{{ $user }}" data-domain="{{ $domain }}"></span>
