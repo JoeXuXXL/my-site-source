@@ -16,7 +16,7 @@ sections:
       text: ''
       # Show a call-to-action button under your biography? (optional)
       button:
-        text: See CV
+        text: Download CV
         url: uploads/CV_phdphase.pdf
       headings:
         about: ''
