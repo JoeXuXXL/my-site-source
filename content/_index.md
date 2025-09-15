@@ -29,16 +29,16 @@ sections:
       avatar:
         size: large # Options: small (150px), medium (200px, default), large (320px), xl (400px), xxl (500px)
         shape: rounded # Options: circle (default), square, rounded
-  # - block: markdown
-  #   content:
-  #     title: '📚 My Research'
-  #     subtitle: ''
-  #     text: |-
-  #       Use this area to speak to your mission. I'm a research scientist in the Moonshot team at DeepMind. I blog about machine learning, deep learning, and moonshots.
+  - block: markdown
+    content:
+      title: 'About me'
+      subtitle: ''
+      text: |-
+        I am a mathematical physicist in quantum information theory and quantum foundations. 
 
-  #       I apply a range of qualitative and quantitative methods to comprehensively investigate the role of science and technology in the economy.
+        I am interested in understanding quantum network correlations, many-body physics, and cryptography, by applying tools including the theory of operator algebras and noncommutative polynomial optimization. I joined the team PhiQus at Inria Paris-Saclay as a PhD student since October 2023. 
 
-  #       Please reach out to collaborate 😃
+        Feel free reach me at xu[dot]xiangling[at]inria[dot]fr.
   #   design:
   #     columns: '1'
   # - block: collection

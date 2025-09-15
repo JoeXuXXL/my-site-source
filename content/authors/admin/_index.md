@@ -179,8 +179,8 @@ education:
 #       Recognized for contributions to scaling laws in deep learning.
 ---
 
-I am a mathematical physicist in quantum information theory and quantum foundations. 
+<!-- I am a mathematical physicist in quantum information theory and quantum foundations. 
 
 I am interested in understanding quantum network correlations, many-body physics, and cryptography, by applying tools including the theory of operator algebras and noncommutative polynomial optimization. I joined the team PhiQus at Inria Paris-Saclay as a PhD student since October 2023. 
 
-Feel free reach me at xu[dot]xiangling[at]inria[dot]fr.
+Feel free reach me at xu[dot]xiangling[at]inria[dot]fr. -->
