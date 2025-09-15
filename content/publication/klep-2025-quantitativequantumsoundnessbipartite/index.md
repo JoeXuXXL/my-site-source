@@ -10,7 +10,7 @@ authors:
 - Xiangling Xu
 - Yuming Zhao
 date: '2025-01-01'
-publishDate: '2025-09-15T00:47:04.520865Z'
+publishDate: '2025-09-15T00:57:04.150568Z'
 publication_types:
 - manuscript
 abstract: "Compiling Bell games under cryptographic assumptions replaces the need
