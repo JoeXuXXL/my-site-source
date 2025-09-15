@@ -6,8 +6,9 @@ date: '2023-01-01'
 publishDate: '2025-09-15T00:57:04.127554Z'
 publication_types:
 - thesis
-doi: https://doi.org/10.3929/ethz-b-000613670
-abstract: In this thesis, we explore the applications of the theory of operator algebras,
+hugoblox.ids: { doi: https://doi.org/10.3929/ethz-b-000613670 }
+abstract: |
+  In this thesis, we explore the applications of the theory of operator algebras,
   such as C ∗ -algebras and von Neumann algebras, in quantum physics with a focus
   on the quantum bilocal network scenario. Originating from Heisenberg’s picture,
   the theory of operator algebras has become a fruitful field and a powerful mathematical
