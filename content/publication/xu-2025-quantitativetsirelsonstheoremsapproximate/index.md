@@ -6,7 +6,7 @@ authors:
 - Marc-Olivier Renou
 - Igor Klep
 date: '2025-01-01'
-publishDate: '2025-09-15T00:47:04.513116Z'
+publishDate: '2025-09-15T00:57:04.142931Z'
 publication_types:
 - manuscript
 abstract: "Whether an almost-commuting pair of operators must be close to a commuting
