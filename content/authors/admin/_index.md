@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Xiangling Xu<br>许湘灵
+title: Xiangling Xu 许湘灵
 
 # Name pronunciation (optional)
 name_pronunciation: ''

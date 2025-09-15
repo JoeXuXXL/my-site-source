@@ -1,12 +1,23 @@
-/* 确保<br>标签在移动端和桌面端都能正确换行 */
-.author-name br {
-    display: block; /* 始终显示换行 */
-}
+/* 控制姓名的显示方式 */
 
-/* 可选：根据具体需要调整不同屏幕尺寸下的姓名显示 */
+/* 在移动设备上的特定位置（如简历部分）允许换行 */
 @media (max-width: 768px) {
-    .author-name {
-        white-space: normal; /* 允许换行 */
-        line-height: 1.4; /* 调整行高以适应两行姓名 */
-    }
+  .resume-section .author-name {
+    white-space: normal;
+    display: block;
+  }
+  
+  /* 创建两个独立的行用于英文和中文名 */
+  .author-name-en, .author-name-cn {
+    display: block;
+    line-height: 1.2;
+  }
+  
+  .author-name-en {
+    margin-bottom: 0.2em;
+  }
+  
+  .author-name-cn {
+    margin-top: 0.2em;
+  }
 }
