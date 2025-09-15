@@ -1,0 +1,78 @@
+{{/* layouts/partials/blocks/resume-biography-3.html */}}
+{{ $block := . }}
+{{ $person_page := site.GetPage (printf "/authors/%s" ($block.Content.username | default "admin")) }}
+{{ if $person_page }}
+  {{ $person := $person_page.Params }}
+  <div class="h-screen">
+    <div class="flex h-full items-center justify-center">
+      <div class="grid grid-cols-1 gap-12 lg:grid-cols-2">
+        <div class="prose">
+          {{/* --- BIOGRAPHY & LINKS --- */}}
+          <h1 class="text-5xl font-bold">{{ $person.name }}</h1>
+          <p class="text-2xl">{{ $person.role | markdownify }}</p>
+          
+          {{/* --- START: REMOVE PROFESSIONAL SUMMARY --- */}}
+          {{/*
+            The "Professional Summary" text is the default heading.
+            You can remove the <h2> line below entirely to get rid of the heading.
+          */}}
+          <h2 class="text-2xl font-bold">{{- with $block.Content.headings.about -}}{{- . -}}{{- else -}}{{- i18n "about_me" -}}{{- end -}}</h2>
+          {{/* --- END: REMOVE PROFESSIONAL SUMMARY --- */}}
+          
+          {{ $person_page.Content }}
+
+          <div class="mt-8 flex flex-wrap justify-center gap-4 lg:justify-start">
+            {{ with $block.Content.button }}
+              <a href="{{ .url | relURL }}" class="btn btn-primary">{{ .text }}</a>
+            {{ end }}
+            {{ range $person.profiles }}
+              <a href="{{ if .url }}{{ .url | relURL }}{{ else }}#{{ end }}" class="flex items-center space-x-2 btn btn-secondary" {{ if not .url }}style="cursor:default;"{{ end }}>
+                <i class="{{ .icon_pack | default `fas` }} {{ .icon }} text-xl"></i>
+                <span>{{ .label }}</span>
+              </a>
+            {{ end }}
+          </div>
+        </div>
+
+        <div class="grid place-items-center">
+          <div class="prose">
+            {{/* --- START: SWAP SECTIONS HERE --- */}}
+            {{/*
+              To swap the order, cut the entire "Interests" block
+              and paste it BEFORE the "Education" block.
+            */}}
+            
+            {{/* Interests Block */}}
+            {{ with $person.interests }}
+              <h2 class="text-2xl font-bold">{{- with $block.Content.headings.interests -}}{{- . -}}{{- else -}}{{- i18n "interests" -}}{{- end -}}</h2>
+              <ul class="space-x-4">
+                {{ range . }}
+                  <li class="inline-block">{{ . }}</li>
+                {{ end }}
+              </ul>
+            {{ end }}
+
+            {{/* Education Block */}}
+            {{ with $person.education }}
+              <h2 class="text-2xl font-bold">{{- with $block.Content.headings.education -}}{{- . -}}{{- else -}}{{- i18n "education" -}}{{- end -}}</h2>
+              <ul class="space-y-4">
+                {{ range .courses }}
+                  <li class="flex items-center space-x-4">
+                    <div class="h-12 w-12 rounded-full bg-primary-100 text-center text-2xl leading-[3rem] text-primary-700">
+                      <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div>
+                      <h4 class="text-lg font-semibold">{{ .course }}</h4>
+                      <p class="text-gray-600">{{ .institution }}</p>
+                    </div>
+                  </li>
+                {{ end }}
+              </ul>
+            {{ end }}
+            {{/* --- END: SWAP SECTIONS HERE --- */}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{{ end }}

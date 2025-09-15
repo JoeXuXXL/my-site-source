@@ -20,8 +20,8 @@ sections:
         url: uploads/CV_phdphase.pdf
       headings:
         about: ''
-        interests: ''
         education: ''
+        interests: ''
     design:
       # Apply a gradient background
       css_class: hbx-bg-gradient
