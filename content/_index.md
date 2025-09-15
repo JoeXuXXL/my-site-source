@@ -21,7 +21,7 @@ sections:
       headings:
         about: About me
         # education: Education
-        # interests: Research Interests
+        interests: Research Interests
     design:
       # Apply a gradient background
       css_class: g-gradient-to-b from-sky-50 via-white to-white dark:from-slate-800 dark:via-sky-950 dark:to-slate-950  # hbx-bg-gradient

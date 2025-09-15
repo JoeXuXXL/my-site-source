@@ -56,11 +56,11 @@ profiles:
     url: https://orcid.org/0009-0009-9213-3049
     label: ORCID
 
-# interests:
-#   - Quantum information
-#   - Quantum foundations
-#   - Operator algebras
-#   - Noncommutatitive polynomial optimization
+interests:
+  - Quantum information
+  - Quantum foundations
+  - Operator algebras
+  - Noncommutatitive polynomial optimization
 
 # education:
 #   - area: PhD Infomatique
