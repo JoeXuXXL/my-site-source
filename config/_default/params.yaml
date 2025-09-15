@@ -70,19 +70,20 @@ publications:
     - X Xu
     - X. Xu
     - 许湘灵
-social:
-  - icon: envelope # at-symbol
-    # url: 'mailto:xu.xiangling@inria.fr'
-    label: xu[dot]xiangling[at]inria[dot]fr
-  #   label: E-mail Me
-  # - icon: brands/github
-  #   url: https://github.com/xiangling-xu
-  - icon: academicons/google-scholar
-    url: https://scholar.google.com/citations?user=cI2Q634AAAAJ&hl=en
-    label: Google Scholar
-  - icon: academicons/arxiv
-    url: https://arxiv.org/search/?query=Xu%2C+Xiangling&searchtype=author&abstracts=show&order=-announced_date_first&size=50
-    label: arXiv
-  - icon: academicons/orcid
-    url: https://orcid.org/0009-0009-9213-3049
-    label: ORCID
+
+# social:
+#   - icon: envelope # at-symbol
+#     # url: 'mailto:xu.xiangling@inria.fr'
+#     label: xu[dot]xiangling[at]inria[dot]fr
+#   #   label: E-mail Me
+#   # - icon: brands/github
+#   #   url: https://github.com/xiangling-xu
+#   - icon: academicons/google-scholar
+#     url: https://scholar.google.com/citations?user=cI2Q634AAAAJ&hl=en
+#     label: Google Scholar
+#   - icon: academicons/arxiv
+#     url: https://arxiv.org/search/?query=Xu%2C+Xiangling&searchtype=author&abstracts=show&order=-announced_date_first&size=50
+#     label: arXiv
+#   - icon: academicons/orcid
+#     url: https://orcid.org/0009-0009-9213-3049
+#     label: ORCID

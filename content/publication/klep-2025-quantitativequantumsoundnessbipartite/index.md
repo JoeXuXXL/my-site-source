@@ -27,9 +27,9 @@ abstract: "Compiling Bell games under cryptographic assumptions replaces the nee
   hierarchy, establishing it as a robust numerical tool that is of independent interest.
   Finally, for games without finite-dimensional optimal strategies, we explore the
   necessity of NPA approximation error for quantitatively bounding their compiled
-  scores, linking these considerations to the complexity conjecture $mathrmMIP^mathrmco=mathrmcoRE$
-  and open challenges such as quantum homomorphic encryption correctness for ``weakly
-  commuting'' quantum registers."
+  scores, linking these considerations to the complexity conjecture $\mathrm{MIP}^{\mathrm{co}}=\mathrm{coRE}$
+  and open challenges such as quantum homomorphic encryption correctness for "weakly
+  commuting" quantum registers."
 links:
 - name: arXiv
   url: https://arxiv.org/abs/2507.17006
