@@ -18,8 +18,6 @@ content_meta:
   trending: false
 ---
 
-{{< toc mobile_only=true is_open=true >}}
-
 As an "entertainment" to amuses myself after two weeks of continuously working, for two submissions of QIP, I decided to make a website through GitHub.
 
 My programming skill is long gone for at least five years. Took me a long time trying to figure out this Hugo + GitHub mess. But once it is sorted out, it is sorted out, phew. Rather late in the night now.

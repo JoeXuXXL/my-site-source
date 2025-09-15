@@ -60,7 +60,13 @@ features:
   privacy_pack:
     enable: false
 
-# Publications
+# In config/_default/params.yaml
+
 publications:
-  # Highlight the author's name?
-  highlight: true
+  # A list of author names to highlight in publications
+  highlight_authors:
+    - Xiangling Xu
+    - Xu, Xiangling
+    - X Xu
+    - X. Xu
+    - 许湘灵

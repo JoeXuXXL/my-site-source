@@ -1,8 +1,29 @@
 /* assets/scss/custom.scss */
 
-/* Enable numbering for the ordered list in the citation view */
-.page-body .pub-list-item ol,
+/* --- Numbered Publication List for Citation View --- */
+
+/* 1. Create a counter for the parent container of the publications */
+.page-body .content-widget-body {
+  counter-reset: pub-counter; /* This creates our custom counter */
+}
+
+/* 2. Style each publication item to display the counter */
 .page-body .pub-list-item {
-  list-style-type: decimal !important;
-  margin-left: 2rem;
+  list-style: none; /* Hide any default list styles */
+  margin-left: 2.5rem; /* Make space on the left for our number */
+  position: relative; /* Needed for positioning the number */
+}
+
+/* 3. Generate the number using the ::before pseudo-element */
+.page-body .pub-list-item::before {
+  counter-increment: pub-counter; /* Add 1 to the counter for each item */
+  content: '[' counter(pub-counter) ']'; /* Display it as "[1]", "[2]", etc. */
+  
+  /* Positioning and styling for the number */
+  position: absolute;
+  left: -2.5rem; /* Position it in the space we created */
+  top: 0;
+  width: 2rem; /* Give it a fixed width */
+  text-align: right; /* Align the number to the right for a clean look */
+  font-weight: bold;
 }
