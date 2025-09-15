@@ -1,6 +1,6 @@
 ---
 # Display name
-title: '<span class="whitespace-nowrap">Xiangling Xu</span><br><span class="whitespace-nowrap">许湘灵</span>'
+title: Xiangling Xu<br>许湘灵
 
 # Name pronunciation (optional)
 name_pronunciation: ''
@@ -8,13 +8,6 @@ name_pronunciation: ''
 # Full name (for SEO)
 first_name: Xiangling
 last_name: Xu
-
-name_variations:
-  - Xiangling Xu
-  - Xu, Xiangling
-  - X Xu
-  - X. Xu
-  - 许湘灵
 
 # Pronouns (optional)
 # pronouns: he/him
@@ -27,7 +20,7 @@ status:
 superuser: true
 
 # Highlight the author in author lists? (true/false)
-highlight_name: true
+highlight_name: false
 
 # Role/position/tagline
 role: PhD student
