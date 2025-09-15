@@ -40,17 +40,21 @@ organizations:
 # Social network links
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 profiles:
-  # - icon: at-symbol
-  #   url: 'mailto:alex.johnson@meta.com'
+  - icon: at-symbol
+    # url: 'mailto:alex.johnson@meta.com'
+    label: xu[dot]xiangling[at]inria[dot]fr
   #   label: E-mail Me
   # - icon: brands/github
   #   url: https://github.com/xiangling-xu
   - icon: academicons/google-scholar
     url: https://scholar.google.com/citations?user=cI2Q634AAAAJ&hl=en
+    label: Google Scholar
   - icon: academicons/arxiv
     url: https://arxiv.org/search/?query=Xu%2C+Xiangling&searchtype=author&abstracts=show&order=-announced_date_first&size=50
+    label: arXiv
   - icon: academicons/orcid
     url: https://orcid.org/0009-0009-9213-3049
+    label: ORCID
 
 interests:
   - Quantum information
@@ -60,7 +64,7 @@ interests:
 
 education:
   - area: PhD Infomatique
-    institution: Inria Paris-Saclay & Institut polytechnique de Paris, France
+    institution: Inria Paris-Saclay & Institut Polytechnique de Paris, France
     date_start: 2023-10-01
     date_end: ''
     # summary: |

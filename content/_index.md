@@ -16,12 +16,12 @@ sections:
       text: ''
       # Show a call-to-action button under your biography? (optional)
       button:
-        text: CV
+        text: Download CV
         url: uploads/CV_phdphase.pdf
       headings:
         about: ''
-        education: ''
         interests: ''
+        education: ''
     design:
       # Apply a gradient background
       css_class: hbx-bg-gradient
