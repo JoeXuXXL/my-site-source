@@ -1,5 +1,5 @@
 ---
-title: Recent & Upcoming Talks
+title: Conferences, talks, and etc.
 type: page
 cms_exclude: true
 #url: talk

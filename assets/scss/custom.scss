@@ -1,0 +1,23 @@
+/* assets/scss/custom.scss */
+
+/* --- Custom styles for Publication List (with reverse numbering) --- */
+
+.page-body ol {
+  counter-reset: pub-counter; /* Create a new counter */
+  list-style: none; /* Hide the default browser numbering */
+}
+
+.page-body ol li {
+  counter-increment: pub-counter; /* Increment the counter for each item */
+}
+
+/* Use a ::before pseudo-element to display our custom number */
+.page-body ol li::before {
+  /* Calculate the reverse number and display it */
+  content: '[' counter(list-item, decimal) '] '; /* change list-item to pub-counter for reverse number */
+  display: inline-block;
+  min-width: 2.5rem; /* Give it a fixed width for alignment */
+  margin-left: -2.5rem; /* Pull it back into the margin */
+  text-align: right;
+  padding-right: 0.5rem;
+}

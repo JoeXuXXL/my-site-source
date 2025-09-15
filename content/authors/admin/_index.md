@@ -9,6 +9,13 @@ name_pronunciation: ''
 first_name: Xiangling
 last_name: Xu
 
+name_variations:
+  - Xiangling Xu
+  - Xu, Xiangling
+  - X Xu
+  - X. Xu
+  - 许湘灵
+
 # Pronouns (optional)
 # pronouns: he/him
 
