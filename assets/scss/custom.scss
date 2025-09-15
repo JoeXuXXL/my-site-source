@@ -1,29 +1,25 @@
-/* assets/scss/custom.scss */
-
-/* --- Numbered Publication List for Citation View --- */
-
-/* 1. Create a counter for the parent container of the publications */
-.page-body .content-widget-body {
-  counter-reset: pub-counter; /* This creates our custom counter */
+/* Custom styling for the two-column layout */
+.custom-bio-grid {
+  grid-template-columns: 1fr;
 }
 
-/* 2. Style each publication item to display the counter */
-.page-body .pub-list-item {
-  list-style: none; /* Hide any default list styles */
-  margin-left: 2.5rem; /* Make space on the left for our number */
-  position: relative; /* Needed for positioning the number */
+@media (min-width: 768px) {
+  .custom-bio-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
-/* 3. Generate the number using the ::before pseudo-element */
-.page-body .pub-list-item::before {
-  counter-increment: pub-counter; /* Add 1 to the counter for each item */
-  content: '[' counter(pub-counter) ']'; /* Display it as "[1]", "[2]", etc. */
-  
-  /* Positioning and styling for the number */
-  position: absolute;
-  left: -2.5rem; /* Position it in the space we created */
-  top: 0;
-  width: 2rem; /* Give it a fixed width */
-  text-align: right; /* Align the number to the right for a clean look */
-  font-weight: bold;
+/* Compact education items */
+.education-item {
+  margin-bottom: 1rem;
+}
+
+/* Interest tags styling */
+.interest-tag {
+  transition: all 0.3s ease;
+}
+
+.interest-tag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
