@@ -16,7 +16,7 @@ sections:
       text: ''
       # Show a call-to-action button under your biography? (optional)
       button:
-        text: Download CV
+        text: See CV
         url: uploads/CV_phdphase.pdf
       headings:
         about: ''
@@ -29,16 +29,16 @@ sections:
       avatar:
         size: large # Options: small (150px), medium (200px, default), large (320px), xl (400px), xxl (500px)
         shape: rounded # Options: circle (default), square, rounded
-  - block: markdown
-    content:
-      title: 'About me'
-      subtitle: ''
-      text: |-
-        I am a mathematical physicist in quantum information theory and quantum foundations. 
+  # - block: markdown
+  #   content:
+  #     title: 'About me'
+  #     subtitle: ''
+  #     text: |-
+  #       I am a mathematical physicist in quantum information theory and quantum foundations. 
 
-        I am interested in understanding quantum network correlations, many-body physics, and cryptography, by applying tools including the theory of operator algebras and noncommutative polynomial optimization. I joined the team PhiQus at Inria Paris-Saclay as a PhD student since October 2023. 
+  #       I am interested in understanding quantum network correlations, many-body physics, and cryptography, by applying tools including the theory of operator algebras and noncommutative polynomial optimization. I joined the team PhiQus at Inria Paris-Saclay as a PhD student since October 2023. 
 
-        Feel free reach me at xu[dot]xiangling[at]inria[dot]fr.
+  #       Feel free reach me at xu[dot]xiangling[at]inria[dot]fr.
   #   design:
   #     columns: '1'
   # - block: collection
