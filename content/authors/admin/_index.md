@@ -63,27 +63,27 @@ interests:
   - Noncommutatitive polynomial optimization
 
 # education:
-  - area: PhD Infomatique
-    institution: Inria Paris-Saclay & Institut Polytechnique de Paris, France
-    date_start: 2023-10-01
-    date_end: ''
+  # - area: PhD Infomatique
+  #   institution: Inria Paris-Saclay & Institut Polytechnique de Paris, France
+  #   date_start: 2023-10-01
+  #   date_end: ''
     # summary: |
     #   Thesis on _Scaling Laws for Neural Language Models_. Supervised by Prof. Andrew Ng. Published 5 papers in NeurIPS and ICML, with 2 best paper awards.
     # button:
     #   text: 'Read Thesis'
     #   url: 'https://example.com/thesis.pdf'
-  - area: MSc Mathematics
-    institution: Eidgenössische Technische Hochschule (ETH) Zürich, Switzerland
-    date_start: 2020-09-15
-    date_end: 2023-06-03
+  # - area: MSc Mathematics
+  #   institution: Eidgenössische Technische Hochschule (ETH) Zürich, Switzerland
+  #   date_start: 2020-09-15
+  #   date_end: 2023-06-03
     # summary: |
     #   GPA: 5.69/6.00
 
     #   Specialized in machine learning and robotics.
-  - area: BSc Mathematics and Physics
-    institution: University of Toronto, Canada
-    date_start: 2016-09-01
-    date_end: 2020-05-31
+  # - area: BSc Mathematics and Physics
+  #   institution: University of Toronto, Canada
+  #   date_start: 2016-09-01
+  #   date_end: 2020-05-31
     # summary: |
     #   GPA: 3.95/4.00
 
