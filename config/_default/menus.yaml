@@ -13,9 +13,9 @@ main:
   - name: Conferences
     url: /conference/
     weight: 12
-  # - name: News
-  #   url: /post/
-  #   weight: 13
+  - name: News
+    url: /post/
+    weight: 13
   # - name: Experience
   #   url: experience/
   #   weight: 20
