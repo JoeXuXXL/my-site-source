@@ -73,7 +73,7 @@ education:
     #   text: 'Read Thesis'
     #   url: 'https://example.com/thesis.pdf'
   - area: MSc Mathematics
-    institution: ETH Zürich, Switzerland
+    institution: Eidgenössische Technische Hochschule (ETH) Zürich, Switzerland
     date_start: 2020-09-15
     date_end: 2023-06-03
     # summary: |
@@ -178,9 +178,3 @@ education:
 #     summary: |
 #       Recognized for contributions to scaling laws in deep learning.
 ---
-
-I am a **mathematical physicist** working in quantum information theory and quantum foundations.
-
-My research focuses on quantum network correlations, many-body physics, quantum cryptography, and related topics in quantum mechanics, using tools from operator algebras and noncommutative polynomial optimization. 
-
-Since October 2023, I have been a PhD student with the PhiQus team at Inria Paris-Saclay. Feel free to reach me at xu[dot]xiangling[at]inria[dot]fr.
