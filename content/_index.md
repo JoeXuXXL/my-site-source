@@ -24,7 +24,7 @@ sections:
         interests: ''
     design:
       # Apply a gradient background
-      css_class: hbx-bg-gradient
+      css_class: g-gradient-to-b from-sky-50 via-white to-white dark:from-slate-900 dark:via-slate-950 dark:to-slate-950  # hbx-bg-gradient
       # Avatar customization
       avatar:
         size: large # Options: small (150px), medium (200px, default), large (320px), xl (400px), xxl (500px)
