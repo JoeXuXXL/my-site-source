@@ -52,7 +52,7 @@ sections:
       #     Institution: "University of Toronto"
       #     location: "Canada"
       #     date_start: "2016-09-01"
-          date_end: "2020-05-31"
+          # date_end: "2020-05-31"
           # description: |
           #   (Thesis)[]
     design:
