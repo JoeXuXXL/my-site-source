@@ -24,14 +24,11 @@ sections:
         interests: Research Interests
     design:
       # Apply a gradient background
-      css_class: min-h-0 g-gradient-to-b from-sky-250 via-sky-100 to-white dark:from-slate-800 dark:via-sky-900 dark:to-slate-950  # hbx-bg-gradient
+      css_class: g-gradient-to-b from-sky-250 via-sky-100 to-white dark:from-slate-800 dark:via-sky-900 dark:to-slate-950  # hbx-bg-gradient
       # Avatar customization
       avatar:
         size: large # Options: small (150px), medium (200px, default), large (320px), xl (400px), xxl (500px)
         shape: circle # Options: circle (default), square, rounded
-      # spacing:
-      # # Padding is [Top, Right, Bottom, Left].
-        padding: ["3", "0", "0", "0"]
   - block: features
     content:
       title: ''

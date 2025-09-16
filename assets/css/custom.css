@@ -25,6 +25,6 @@
 /* assets/css/custom.css */
 /* Reduces the top padding for any section with the 'compact-section-top' class, for education in the homepage*/
 .compact-section-top {
-  /* Use padding instead of margin for a more stable layout */
-  padding-top: -3rem !important; 
+  /* translateY moves an element up or down. Negative values go up. */
+  transform: translateY(-6rem) !important;
 }
