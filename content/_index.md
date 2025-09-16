@@ -4,6 +4,13 @@ title: ''
 date: 2025-09-14
 type: landing
 
+# ADD THIS CASCADE BLOCK TO GIVE THE HOMEPAGE A UNIQUE CLASS
+cascade:
+  - _target:
+      kind: page
+    params:
+      page_css_class: is-homepage
+
 design:
   # Default section spacing
   spacing: '3rem'

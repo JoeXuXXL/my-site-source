@@ -36,3 +36,11 @@
     transform: translateY(-16rem) !important;
   }
 }
+
+/*
+  Targets the footer, but ONLY on the homepage (which now has our 'is-homepage' class).
+  This will NOT affect the footer on any other page.
+*/
+.is-homepage .site-footer {
+  padding-top: -5rem !important; /* Adjust this value as needed */
+}
