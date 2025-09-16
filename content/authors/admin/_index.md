@@ -172,7 +172,7 @@ interests:
 #       Recognized for contributions to scaling laws in deep learning.
 ---
 
-I am a *mathematical physicist* working in quantum information theory and quantum foundations. My research focuses on quantum network correlations, many-body physics, and quantum cryptography, using tools from operator algebras and noncommutative polynomial optimization.
+I am a **mathematical physicist** working in quantum information theory and quantum foundations. My research focuses on quantum network correlations, many-body physics, and quantum cryptography, using tools from operator algebras and noncommutative polynomial optimization.
 
 Since October 2023, I have been a PhD student with [PhiQus](https://team.inria.fr/phiqus/) at Inria Paris-Saclay, supervised by [Marc-Olivier Renou](https://marcolivierrenou.com/).
 

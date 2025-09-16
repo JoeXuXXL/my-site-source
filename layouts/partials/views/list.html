@@ -1,0 +1,50 @@
+{{/*
+  Custom List View for the Collection Block (Tailwind CSS Version)
+  Migrated from the original Bootstrap version.
+*/}}
+<div class="space-y-6">
+  {{ range .Pages }}
+    {{ $page := . }}
+    {{ $params := .Params }}
+    <div class="flex flex-col sm:flex-row sm:items-start sm:space-x-4">
+      
+      <!-- Publication Year -->
+      <div class="flex-shrink-0 w-24 text-left sm:text-right">
+        <p class="text-lg font-semibold text-gray-500 dark:text-gray-400">{{ $page.Date.Format "2006" }}</p>
+      </div>
+
+      <!-- Publication Details -->
+      <div class="flex-grow">
+        <h3 class="text-xl font-semibold leading-snug">
+          <a href="{{ $page.RelPermalink }}" class="text-gray-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400">{{ $page.Title }}</a>
+        </h3>
+        {{ with $params.authors }}
+        <div class="text-sm text-gray-600 dark:text-gray-400 mt-1">
+          {{ delimit . ", " | markdownify }}
+        </div>
+        {{ end }}
+        {{ with $params.publication }}
+        <div class="text-sm italic text-gray-500 dark:text-gray-500 mt-1">
+          {{ . | markdownify }}
+        </div>
+        {{ end }}
+
+        <!-- Links (PDF, Code, etc.) -->
+        <div class="mt-2 space-x-4">
+          {{ with $params.url_pdf }}
+            <a class="btn btn-xs" href="{{ . }}" target="_blank" rel="noopener">PDF</a>
+          {{ end }}
+          {{ with $params.url_code }}
+            <a class="btn btn-xs" href="{{ . }}" target="_blank" rel="noopener">Code</a>
+          {{ end }}
+          {{ with $params.url_dataset }}
+            <a class="btn btn-xs" href="{{ . }}" target="_blank" rel="noopener">Dataset</a>
+          {{ end }}
+          {{ with $params.url_slides }}
+            <a class="btn btn-xs" href="{{ . }}" target="_blank" rel="noopener">Slides</a>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  {{ end }}
+</div>
