@@ -1,0 +1,31 @@
+{{/*
+  layouts/partials/views/mycitation--start.html
+  This file groups publications by year and calculates the reverse-chronological number.
+*/}}
+
+{{/* Fetch all publications, sorted by date descending */}}
+{{ $pages := where .page.Pages ".Params.publication_type" "!=" "0" }}
+{{ $groups := $pages.GroupByDate "2006" }}
+{{ $sorted_groups := sort $groups "Key" "desc" }}
+
+<!-- Main container for all years -->
+<div class="space-y-12">
+  {{ range $sorted_groups }}
+    <!-- Year Heading -->
+    <div class="relative">
+      <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">{{ .Key }}</h2>
+      <div class="absolute -bottom-2 h-0.5 w-16 bg-primary-500"></div>
+    </div>
+
+    <!-- Container for papers within this year -->
+    <div class="mt-6 space-y-8">
+      {{ range $index, $page := .Pages }}
+        {{/* Calculate the reverse-chronological number (e.g., 3, 2, 1) */}}
+        {{ $item_number := sub (len .Pages) $index }}
+
+        {{/* Render a single publication by calling the 'core' view file */}}
+        {{/* We pass the page data and the calculated number as the context */}}
+        {{ partial "views/mycitation.html" (dict "item" $page "number" $item_number) }}
+      {{ end }}
+    </div>
+  {{ end }}
