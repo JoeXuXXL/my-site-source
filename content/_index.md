@@ -29,23 +29,29 @@ sections:
       avatar:
         size: large # Options: small (150px), medium (200px, default), large (320px), xl (400px), xxl (500px)
         shape: circle # Options: circle (default), square, rounded
-  - block: custom_education
+  - block: features
     content:
-      title: "Education"
+      title: Education
+      # The 'features' block is responsive. It will be 3 columns on large screens,
+      # and automatically adjust to 2 or 1 column on smaller screens.
+      columns: '3'
       items:
-        - title: "PhD in Informatique"
-          institution: "Inria Paris-Saclay & Institut Polytechnique de Paris"
-          location: "France • 2023–Present"
-          supervisor: "Supervised by Prof. Marc-Olivier Renou"
-        - title: "MSc in Mathematics"
-          institution: "ETH Zürich"
-          location: "Switzerland • 2020–2023"
-        - title: "BSc in Mathematics and Physics"
-          institution: "University of Toronto"
-          location: "Canada • 2016–2020"
+        - name: '**PhD in Informatique**'
+          description: '*Inria Paris-Saclay & Institut Polytechnique de Paris*<br>France • 2023–Present<br>Supervised by Prof. Marc-Olivier Renou'
+          icon: graduation-cap
+          icon_pack: fas
+        - name: '**MSc in Mathematics**'
+          description: '*ETH Zürich*<br>Switzerland • 2020–2023'
+          icon: graduation-cap
+          icon_pack: fas
+        - name: '**BSc in Mathematics and Physics**'
+          description: '*University of Toronto*<br>Canada • 2016–2020'
+          icon: graduation-cap
+          icon_pack: fas
     design:
-      # This will be used to style the section
-      css_class: 'compact-education'
+      # This ensures the background color matches the rest of the page.
+      # You can also use 'hbx-bg-gradient' or other classes if you prefer.
+      css_class: g-gradient-to-b from-sky-200 via-sky-50 to-white dark:from-slate-800 dark:via-sky-900 dark:to-slate-950
   # - block: markdown
   #   content:
   #     title: "Education"
