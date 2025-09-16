@@ -59,14 +59,11 @@ features:
     engine: mathjax
   privacy_pack:
     enable: false
-  # icons:
-  #   enable: true
-  #   provider: ['hero', 'academicons', 'fontawesome'] # Options: 'fa' (FontAwesome), 'ai' (Academicons)
-  custom_css:
-    # Add these lines to force-load the icon packs' CSS
-    - 'media/icons/academicons.css'
-    - 'media/icons/fontawesome.css'
-    - 'media/icons/hero.css'
+
+icon_libraries:
+  - heroicons
+  - academicons
+  - fontawesome
 
 # In config/_default/params.yaml
 
