@@ -31,7 +31,7 @@ sections:
         shape: circle # Options: circle (default), square, rounded
   - block: features
     content:
-      title: ''
+      title: Education
       # The 'features' block is responsive. It will be 3 columns on large screens,
       # and automatically adjust to 2 or 1 column on smaller screens.
       columns: '3'
