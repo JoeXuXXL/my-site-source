@@ -1,5 +1,5 @@
 ---
 title: News
 type: page
-view: article-grid
+view: compact # article-grid
 ---
