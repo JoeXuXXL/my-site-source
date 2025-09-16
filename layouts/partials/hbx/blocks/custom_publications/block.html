@@ -20,7 +20,7 @@
   {{ $counter := len $sorted_pages }}
 
   <!-- Main container for all years -->
-  <div class="space-y-3">
+  <div class="space-y-4">
     {{ range $groups }}
       <!-- Year grouping -->
       <div class="relative">
@@ -29,7 +29,7 @@
       </div>
 
       <!-- Container for papers within a single year -->
-      <div class="mt-4 space-y-3">
+      <div class="mt-4 space-y-4">
         {{ range $page := .Pages }}
           {{ $params := $page.Params }}
 
@@ -94,8 +94,8 @@
                 {{ range $params.links }}
                   {{ if eq .name "arXiv" }}
                     <a href="{{ .url }}" target="_blank" rel="noopener" class="hover:text-primary-600 dark:hover:text-primary-400 flex items-center">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
-                        <path fill-rule="evenodd" d="M4.5 2A1.5 1.5 0 0 0 3 3.5v13A1.5 1.5 0 0 0 4.5 18h11a1.5 1.5 0 0 0 1.5-1.5V7.621a1.5 1.5 0 0 0-.44-1.06l-4.12-4.122A1.5 1.5 0 0 0 11.378 2H4.5Zm2.25 8.5a.75.75 0 0 0 0 1.5h6.5a.75.75 0 0 0 0-1.5h-6.5Zm0 3a.75.75 0 0 0 0 1.5h6.5a.75.75 0 0 0 0-1.5h-6.5Z" clip-rule="evenodd" />
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 mr-1">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
                       </svg>
                       ARXIV
                     </a>
