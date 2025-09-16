@@ -29,75 +29,22 @@ sections:
       avatar:
         size: large # Options: small (150px), medium (200px, default), large (320px), xl (400px), xxl (500px)
         shape: circle # Options: circle (default), square, rounded
-  - block: markdown
+  -block: markdown
     content:
       title: "Education"
       text: |
-        <div class="education-container">
-          <!-- PhD -->
-          <div class="education-card phd-card">
-            <div class="card-header">
-              <div class="degree-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M11.7 2.805a.75.75 0 01.6 0A60.65 60.65 0 0122.83 8.72a.75.75 0 01-.231 1.337 49.949 49.949 0 00-9.902 3.912l-.003.002-.34.18a.75.75 0 01-.707 0l-.34-.18-.003-.002a49.981 49.981 0 00-9.902-3.912.75.75 0 01-.231-1.337A60.65 60.65 0 0111.7 2.805z" />
-                  <path fill-rule="evenodd" d="M12 2.25a.75.75 0 01.75.75v5.5a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM6.938 4.5a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V5.25a.75.75 0 01.75-.75zm10.125 0a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V5.25a.75.75 0 01.75-.75z" clip-rule="evenodd" />
-                  <path d="M4.663 10.711a49.997 49.997 0 00-2.413 4.87.75.75 0 00.636.812l.34.061a.75.75 0 01.155 1.488l-.337.067a.75.75 0 00-.655.739v1.32c0 .414.336.75.75.75h17.25a.75.75 0 00.75-.75v-1.32a.75.75 0 00-.655-.739l-.338-.067a.75.75 0 01.155-1.488l.34-.061a.75.75 0 00.635-.812 49.979 49.979 0 00-2.413-4.87 3.75 3.75 0 00-6.552 0l-.094.176a.75.75 0 01-1.342 0l-.094-.176a3.75 3.75 0 00-6.552 0z" />
-                </svg>
-              </div>
-              <div class="degree-info">
-                <h3>PhD Informatique</h3>
-                <p class="institution">Inria Paris-Saclay & Institut Polytechnique de Paris</p>
-                <p class="duration">2023 - Present</p>
-              </div>
-            </div>
-            <div class="card-details">
-              <p>Supervised by Prof. Marc-Olivier Renou</p>
-              <p class="location">France</p>
-            </div>
-          </div>
+        **🎓 PhD in Informatique**  
+        *Inria Paris-Saclay & Institut Polytechnique de Paris*  
+        France • 2023–Present  
+        Supervised by Prof. Marc-Olivier Renou
 
-          <!-- MSc -->
-          <div class="education-card msc-card">
-            <div class="card-header">
-              <div class="degree-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M11.7 2.805a.75.75 0 01.6 0A60.65 60.65 0 0122.83 8.72a.75.75 0 01-.231 1.337 49.949 49.949 0 00-9.902 3.912l-.003.002-.34.18a.75.75 0 01-.707 0l-.34-.18-.003-.002a49.981 49.981 0 00-9.902-3.912.75.75 0 01-.231-1.337A60.65 60.65 0 0111.7 2.805z" />
-                  <path fill-rule="evenodd" d="M12 2.25a.75.75 0 01.75.75v5.5a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM6.938 4.5a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V5.25a.75.75 0 01.75-.75zm10.125 0a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V5.25a.75.75 0 01.75-.75z" clip-rule="evenodd" />
-                  <path d="M4.663 10.711a49.997 49.997 0 00-2.413 4.87.75.75 0 00.636.812l.34.061a.75.75 0 01.155 1.488l-.337.067a.75.75 0 00-.655.739v1.32c0 .414.336.75.75.75h17.25a.75.75 0 00.75-.75v-1.32a.75.75 0 00-.655-.739l-.338-.067a.75.75 0 01.155-1.488l.34-.061a.75.75 0 00.635-.812 49.979 49.979 0 00-2.413-4.87 3.75 3.75 0 00-6.552 0l-.094.176a.75.75 0 01-1.342 0l-.094-.176a3.75 3.75 0 00-6.552 0z" />
-                </svg>
-              </div>
-              <div class="degree-info">
-                <h3>MSc Mathematics</h3>
-                <p class="institution">ETH Zürich</p>
-                <p class="duration">2020 - 2023</p>
-              </div>
-            </div>
-            <div class="card-details">
-              <p class="location">Switzerland</p>
-            </div>
-          </div>
+        **🎓 MSc in Mathematics**  
+        *ETH Zürich*  
+        Switzerland • 2020–2023
 
-          <!-- BSc -->
-          <div class="education-card bsc-card">
-            <div class="card-header">
-              <div class="degree-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M11.7 2.805a.75.75 0 01.6 0A60.65 60.65 0 0122.83 8.72a.75.75 0 01-.231 1.337 49.949 49.949 0 00-9.902 3.912l-.003.002-.34.18a.75.75 0 01-.707 0l-.34-.18-.003-.002a49.981 49.981 0 00-9.902-3.912.75.75 0 01-.231-1.337A60.65 60.65 0 0111.7 2.805z" />
-                  <path fill-rule="evenodd" d="M12 2.25a.75.75 0 01.75.75v5.5a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM6.938 4.5a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V5.25a.75.75 0 01.75-.75zm10.125 0a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V5.25a.75.75 0 01.75-.75z" clip-rule="evenodd" />
-                  <path d="M4.663 10.711a49.997 49.997 0 00-2.413 4.87.75.75 0 00.636.812l.34.061a.75.75 0 01.155 1.488l-.337.067a.75.75 0 00-.655.739v1.32c0 .414.336.75.75.75h17.25a.75.75 0 00.75-.75v-1.32a.75.75 0 00-.655-.739l-.338-.067a.75.75 0 01.155-1.488l.34-.061a.75.75 0 00.635-.812 49.979 49.979 0 00-2.413-4.87 3.75 3.75 0 00-6.552 0l-.094.176a.75.75 0 01-1.342 0l-.094-.176a3.75 3.75 0 00-6.552 0z" />
-                </svg>
-              </div>
-              <div class="degree-info">
-                <h3>BSc Mathematics and Physics</h3>
-                <p class="institution">University of Toronto</p>
-                <p class="duration">2016 - 2020</p>
-              </div>
-            </div>
-            <div class="card-details">
-              <p class="location">Canada</p>
-            </div>
-          </div>
-        </div>
+        **🎓 BSc in Mathematics and Physics**  
+        *University of Toronto*  
+        Canada • 2016–2020
     design:
       columns: "1"
       css_class: g-gradient-to-b from-sky-100 via-white to-white dark:from-slate-800 dark:via-sky-950 dark:to-slate-950

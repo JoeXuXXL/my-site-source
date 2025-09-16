@@ -12,19 +12,19 @@ banner:
   image: ''
 
 sections:
+  # - block: collection
+  #   content:
+  #     title: Selected Works
+  #     filters:
+  #       folders:
+  #         - publication
+  #       featured_only: true
+  #   design:
+  #     view: article-grid
+  #     columns: 2
   - block: collection
     content:
-      title: Featured
-      filters:
-        folders:
-          - publication
-        featured_only: true
-    design:
-      view: article-grid
-      columns: 2
-  - block: collection
-    content:
-      title: All Publications
+      title: Full List
       text: ''
       filters:
         folders:
