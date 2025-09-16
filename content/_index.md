@@ -29,6 +29,9 @@ sections:
       avatar:
         size: large # Options: small (150px), medium (200px, default), large (320px), xl (400px), xxl (500px)
         shape: circle # Options: circle (default), square, rounded
+      spacing:
+      # Padding is [Top, Right, Bottom, Left].
+      padding: ["6", "0", "2", "0"]
   - block: features
     content:
       title: ''
