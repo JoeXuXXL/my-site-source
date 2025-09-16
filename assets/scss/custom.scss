@@ -1,102 +1,156 @@
-.education-section {
-  .education-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 1.5rem;
+.education-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.education-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-top: 4px solid;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
   }
-
-  .education-item {
-    display: flex;
-    gap: 1rem;
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    background-color: rgba(243, 244, 246, 0.5);
-    transition: all 0.3s ease;
-
-    &:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    }
-  }
-
-  .education-icon {
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    background-color: #3b82f6;
-    color: white;
-  }
-
-  .education-content {
-    flex: 1;
-  }
-
-  .education-title {
-    font-weight: 600;
-    font-size: 1.125rem;
-    margin-bottom: 0.25rem;
-    color: #1f2937;
-  }
-
-  .education-institution {
-    font-weight: 500;
-    color: #374151;
-    margin-bottom: 0.25rem;
-  }
-
-  .education-location,
-  .education-dates {
-    font-size: 0.875rem;
-    color: #6b7280;
-    margin-bottom: 0.25rem;
-  }
-
-  .education-description {
-    font-size: 0.875rem;
-    color: #4b5563;
-    margin-top: 0.5rem;
-    font-style: italic;
-  }
-
-  /* Dark mode support */
+  
   .dark & {
-    .education-item {
-      background-color: rgba(31, 41, 55, 0.5);
-    }
+    background: #2d3748;
+  }
+}
 
-    .education-title {
-      color: #f3f4f6;
-    }
+.phd-card {
+  border-top-color: #3b82f6;
+}
 
-    .education-institution {
+.msc-card {
+  border-top-color: #10b981;
+}
+
+.bsc-card {
+  border-top-color: #8b5cf6;
+}
+
+.card-header {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.degree-icon {
+  flex-shrink: 0;
+  margin-right: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  
+  svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+.phd-card .degree-icon {
+  background-color: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+}
+
+.msc-card .degree-icon {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+}
+
+.bsc-card .degree-icon {
+  background-color: rgba(139, 92, 246, 0.1);
+  color: #8b5cf6;
+}
+
+.degree-info {
+  flex: 1;
+  
+  h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin: 0 0 0.25rem 0;
+    color: #1f2937;
+    
+    .dark & {
+      color: #f9fafb;
+    }
+  }
+  
+  .institution {
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin: 0 0 0.25rem 0;
+    color: #374151;
+    
+    .dark & {
       color: #e5e7eb;
     }
+  }
+  
+  .duration {
+    font-size: 0.875rem;
+    margin: 0;
+    color: #6b7280;
+    
+    .dark & {
+      color: #9ca3af;
+    }
+  }
+}
 
-    .education-location,
-    .education-dates,
-    .education-description {
+.card-details {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 1rem;
+  
+  .dark & {
+    border-top-color: #4b5563;
+  }
+  
+  p {
+    margin: 0.25rem 0;
+    font-size: 0.9rem;
+    color: #4b5563;
+    
+    .dark & {
       color: #d1d5db;
     }
   }
-
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .education-grid {
-      grid-template-columns: 1fr;
+  
+  .location {
+    font-size: 0.875rem;
+    color: #6b7280;
+    font-style: italic;
+    
+    .dark & {
+      color: #9ca3af;
     }
+  }
+}
 
-    .education-item {
-      flex-direction: column;
-      text-align: center;
-    }
-
-    .education-icon {
-      align-self: center;
-    }
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .education-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .card-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .degree-icon {
+    margin-right: 0;
+    margin-bottom: 0.75rem;
   }
 }

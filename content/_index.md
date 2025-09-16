@@ -24,7 +24,7 @@ sections:
         interests: Research Interests
     design:
       # Apply a gradient background
-      css_class: g-gradient-to-b from-sky-50 via-white to-white dark:from-slate-800 dark:via-sky-950 dark:to-slate-950  # hbx-bg-gradient
+      css_class: g-gradient-to-b from-sky-100 via-white to-white dark:from-slate-800 dark:via-sky-950 dark:to-slate-950  # hbx-bg-gradient
       # Avatar customization
       avatar:
         size: large # Options: small (150px), medium (200px, default), large (320px), xl (400px), xxl (500px)
@@ -33,62 +33,74 @@ sections:
     content:
       title: "Education"
       text: |
-        <div class="education-grid">
+        <div class="education-container">
           <!-- PhD -->
-          <div class="education-item">
-            <div class="education-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path d="M12 14l9-5-9-5-9 5 9 5z" />
-                <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l-9 5m9-5v6" />
-              </svg>
+          <div class="education-card phd-card">
+            <div class="card-header">
+              <div class="degree-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M11.7 2.805a.75.75 0 01.6 0A60.65 60.65 0 0122.83 8.72a.75.75 0 01-.231 1.337 49.949 49.949 0 00-9.902 3.912l-.003.002-.34.18a.75.75 0 01-.707 0l-.34-.18-.003-.002a49.981 49.981 0 00-9.902-3.912.75.75 0 01-.231-1.337A60.65 60.65 0 0111.7 2.805z" />
+                  <path fill-rule="evenodd" d="M12 2.25a.75.75 0 01.75.75v5.5a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM6.938 4.5a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V5.25a.75.75 0 01.75-.75zm10.125 0a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V5.25a.75.75 0 01.75-.75z" clip-rule="evenodd" />
+                  <path d="M4.663 10.711a49.997 49.997 0 00-2.413 4.87.75.75 0 00.636.812l.34.061a.75.75 0 01.155 1.488l-.337.067a.75.75 0 00-.655.739v1.32c0 .414.336.75.75.75h17.25a.75.75 0 00.75-.75v-1.32a.75.75 0 00-.655-.739l-.338-.067a.75.75 0 01.155-1.488l.34-.061a.75.75 0 00.635-.812 49.979 49.979 0 00-2.413-4.87 3.75 3.75 0 00-6.552 0l-.094.176a.75.75 0 01-1.342 0l-.094-.176a3.75 3.75 0 00-6.552 0z" />
+                </svg>
+              </div>
+              <div class="degree-info">
+                <h3>PhD Informatique</h3>
+                <p class="institution">Inria Paris-Saclay & Institut Polytechnique de Paris</p>
+                <p class="duration">2023 - Present</p>
+              </div>
             </div>
-            <div class="education-content">
-              <h3 class="education-title">PhD Informatique</h3>
-              <p class="education-institution">Inria Paris-Saclay & Institut Polytechnique de Paris</p>
-              <p class="education-location">France</p>
-              <p class="education-dates">2023 - Present</p>
-              <p class="education-description">Supervised by Prof. Marc-Olivier Renou</p>
+            <div class="card-details">
+              <p>Supervised by Prof. Marc-Olivier Renou</p>
+              <p class="location">France</p>
             </div>
           </div>
 
           <!-- MSc -->
-          <div class="education-item">
-            <div class="education-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path d="M12 14l9-5-9-5-9 5 9 5z" />
-                <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l-9 5m9-5v6" />
-              </svg>
+          <div class="education-card msc-card">
+            <div class="card-header">
+              <div class="degree-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M11.7 2.805a.75.75 0 01.6 0A60.65 60.65 0 0122.83 8.72a.75.75 0 01-.231 1.337 49.949 49.949 0 00-9.902 3.912l-.003.002-.34.18a.75.75 0 01-.707 0l-.34-.18-.003-.002a49.981 49.981 0 00-9.902-3.912.75.75 0 01-.231-1.337A60.65 60.65 0 0111.7 2.805z" />
+                  <path fill-rule="evenodd" d="M12 2.25a.75.75 0 01.75.75v5.5a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM6.938 4.5a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V5.25a.75.75 0 01.75-.75zm10.125 0a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V5.25a.75.75 0 01.75-.75z" clip-rule="evenodd" />
+                  <path d="M4.663 10.711a49.997 49.997 0 00-2.413 4.87.75.75 0 00.636.812l.34.061a.75.75 0 01.155 1.488l-.337.067a.75.75 0 00-.655.739v1.32c0 .414.336.75.75.75h17.25a.75.75 0 00.75-.75v-1.32a.75.75 0 00-.655-.739l-.338-.067a.75.75 0 01.155-1.488l.34-.061a.75.75 0 00.635-.812 49.979 49.979 0 00-2.413-4.87 3.75 3.75 0 00-6.552 0l-.094.176a.75.75 0 01-1.342 0l-.094-.176a3.75 3.75 0 00-6.552 0z" />
+                </svg>
+              </div>
+              <div class="degree-info">
+                <h3>MSc Mathematics</h3>
+                <p class="institution">ETH Zürich</p>
+                <p class="duration">2020 - 2023</p>
+              </div>
             </div>
-            <div class="education-content">
-              <h3 class="education-title">MSc Mathematics</h3>
-              <p class="education-institution">ETH Zürich</p>
-              <p class="education-location">Switzerland</p>
-              <p class="education-dates">2020 - 2023</p>
+            <div class="card-details">
+              <p class="location">Switzerland</p>
             </div>
           </div>
 
           <!-- BSc -->
-          <div class="education-item">
-            <div class="education-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path d="M12 14l9-5-9-5-9 5 9 5z" />
-                <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l-9 5m9-5v6" />
-              </svg>
+          <div class="education-card bsc-card">
+            <div class="card-header">
+              <div class="degree-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M11.7 2.805a.75.75 0 01.6 0A60.65 60.65 0 0122.83 8.72a.75.75 0 01-.231 1.337 49.949 49.949 0 00-9.902 3.912l-.003.002-.34.18a.75.75 0 01-.707 0l-.34-.18-.003-.002a49.981 49.981 0 00-9.902-3.912.75.75 0 01-.231-1.337A60.65 60.65 0 0111.7 2.805z" />
+                  <path fill-rule="evenodd" d="M12 2.25a.75.75 0 01.75.75v5.5a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM6.938 4.5a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V5.25a.75.75 0 01.75-.75zm10.125 0a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V5.25a.75.75 0 01.75-.75z" clip-rule="evenodd" />
+                  <path d="M4.663 10.711a49.997 49.997 0 00-2.413 4.87.75.75 0 00.636.812l.34.061a.75.75 0 01.155 1.488l-.337.067a.75.75 0 00-.655.739v1.32c0 .414.336.75.75.75h17.25a.75.75 0 00.75-.75v-1.32a.75.75 0 00-.655-.739l-.338-.067a.75.75 0 01.155-1.488l.34-.061a.75.75 0 00.635-.812 49.979 49.979 0 00-2.413-4.87 3.75 3.75 0 00-6.552 0l-.094.176a.75.75 0 01-1.342 0l-.094-.176a3.75 3.75 0 00-6.552 0z" />
+                </svg>
+              </div>
+              <div class="degree-info">
+                <h3>BSc Mathematics and Physics</h3>
+                <p class="institution">University of Toronto</p>
+                <p class="duration">2016 - 2020</p>
+              </div>
             </div>
-            <div class="education-content">
-              <h3 class="education-title">BSc Mathematics and Physics</h3>
-              <p class="education-institution">University of Toronto</p>
-              <p class="education-location">Canada</p>
-              <p class="education-dates">2016 - 2020</p>
+            <div class="card-details">
+              <p class="location">Canada</p>
             </div>
           </div>
         </div>
     design:
       columns: "1"
-      css_class: education-section
+      css_class: g-gradient-to-b from-sky-100 via-white to-white dark:from-slate-800 dark:via-sky-950 dark:to-slate-950
 
   # - block: resume-experience
   #   content:

@@ -1,6 +1,6 @@
 ---
 title: Publications
-type: page
+type: landing
 cms_exclude: true
 
 # View.
@@ -11,11 +11,10 @@ banner:
   caption: ''
   image: ''
 
-content:
+sections:
   - block: collection
-    id: papers
     content:
-      title: Featured Publications
+      title: Featured
       filters:
         folders:
           - publication
@@ -25,7 +24,7 @@ content:
       columns: 2
   - block: collection
     content:
-      title: Recent Publications
+      title: All Publications
       text: ''
       filters:
         folders:
