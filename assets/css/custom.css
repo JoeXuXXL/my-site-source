@@ -23,15 +23,6 @@
 }
 
 /* assets/css/custom.css */
-.compact-education .bg-gray-100 {
-    background-color: #f9fafb; /* A very light gray, change as you like */
-}
-
-/* For dark mode */
-.dark .compact-education .bg-gray-800 {
-    background-color: #1f2937; /* A dark blue-gray */
-}
-
 /* Reduces the top padding for any section with the 'compact-section-top' class, for education in the homepage*/
 .compact-section-top {
   padding-top: -15rem !important; /* The default is usually 6rem */
