@@ -59,6 +59,9 @@ features:
     engine: mathjax
   privacy_pack:
     enable: false
+  icons:
+    enable: true
+    provider: ['hero', 'academicons', 'fontawesome'] # Options: 'fa' (FontAwesome), 'ai' (Academicons)
 
 # In config/_default/params.yaml
 

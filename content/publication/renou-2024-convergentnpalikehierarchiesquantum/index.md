@@ -5,7 +5,7 @@ authors:
 - Xiangling Xu
 - Laurens T. Ligthart
 date: '2024-01-01'
-publishDate: '2025-09-16T15:05:44.964781Z'
+publishDate: '2025-09-15T00:57:04.135215Z'
 publication_types:
 - manuscript
 abstract: Characterising the correlations that arise from locally measuring a single
