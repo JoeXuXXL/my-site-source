@@ -34,9 +34,9 @@ organizations:
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 profiles:
   - icon: envelope # at-symbol
-    # url: 'mailto:xu.xiangling@inria.fr'
-    label: xu[dot]xiangling[at]inria[dot]fr
-  #   label: E-mail Me
+    url: 'mailto:xu[dot]xiangling[at]inria[dot]fr'
+    # label: xu[dot]xiangling[at]inria[dot]fr
+    label: E-mail Me
   # - icon: brands/github
   #   url: https://github.com/xiangling-xu
   - icon: academicons/google-scholar
@@ -176,4 +176,4 @@ I am a **mathematical physicist** working in quantum information theory and quan
 
 My research focuses on quantum network correlations, many-body physics, quantum cryptography, and related topics in quantum mechanics, using tools from operator algebras and noncommutative polynomial optimization. 
 
-Since October 2023, I have been a PhD student with the PhiQus team at Inria Paris-Saclay. Feel free to reach me at xu[dot]xiangling[at]inria[dot]fr.
+Since October 2023, I have been a PhD student with the PhiQus team at Inria Paris-Saclay, supervised by Prof. Marc-Olivier Renou. Feel free to reach me at xu[dot]xiangling[at]inria[dot]fr.

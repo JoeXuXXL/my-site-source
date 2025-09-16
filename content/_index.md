@@ -37,41 +37,18 @@ sections:
       columns: '3'
       items:
         - name: '**PhD in Informatique**'
-          description: '<span class="text-lg font-semibold text-primary-600 dark:text-primary-400">Inria Paris-Saclay & Institut Polytechnique de Paris</span><br>France • 2023–Present<br>Supervised by Prof. Marc-Olivier Renou'
-          icon: hero/graduation-cap
-          # icon_pack: fas
+          description: '<span class="text-lg font-semibold text-gray-900 dark:text-white">Inria Paris-Saclay<br>& Institut Polytechnique de Paris</span><br>France • 2023–Present'
+          icon: hero/academic-cap
         - name: '**MSc in Mathematics**'
-          description: '<span class="text-lg font-semibold text-primary-600 dark:text-primary-400">ETH Zürich</span><br>Switzerland • 2020–2023'
-          icon: hero/graduation-cap
-          # icon_pack: fas
+          description: '<span class="text-lg font-semibold text-gray-900 dark:text-white">ETH Zürich</span><br>Switzerland • 2020–2023'
+          icon: hero/academic-cap
         - name: '**BSc in Mathematics and Physics**'
-          description: '<span class="text-lg font-semibold text-primary-600 dark:text-primary-400">University of Toronto</span><br>Canada • 2016–2020'
-          icon: hero/graduation-cap
-          # icon_pack: fas
+          description: '<span class="text-lg font-semibold text-gray-900 dark:text-white">University of Toronto</span><br>Canada • 2016–2020'
+          icon: hero/academic-cap
     design:
       # This ensures the background color matches the rest of the page.
       # You can also use 'hbx-bg-gradient' or other classes if you prefer.
-      css_class: g-gradient-to-b from-sky-200 via-sky-50 to-white dark:from-slate-800 dark:via-sky-900 dark:to-slate-950
-  # - block: markdown
-  #   content:
-  #     title: "Education"
-  #     text: |
-  #       **🎓 PhD in Informatique**  
-  #       *Inria Paris-Saclay & Institut Polytechnique de Paris*  
-  #       France • 2023–Present  
-  #       Supervised by Prof. Marc-Olivier Renou
-
-  #       **🎓 MSc in Mathematics**  
-  #       *ETH Zürich*  
-  #       Switzerland • 2020–2023
-
-  #       **🎓 BSc in Mathematics and Physics**  
-  #       *University of Toronto*  
-  #       Canada • 2016–2020
-  #   design:
-  #     columns: "3"
-  #     css_class: g-gradient-to-b from-sky-200 via-sky-50 to-white dark:from-slate-800 dark:via-sky-900 dark:to-slate-950
-
+      css_class: g-gradient-to-b from-sky-250 via-sky-100 to-white dark:from-slate-800 dark:via-sky-900 dark:to-slate-950
   # - block: resume-experience
   #   content:
   #     title: "Education"
