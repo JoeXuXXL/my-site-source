@@ -26,5 +26,5 @@
 /* Reduces the top padding for any section with the 'compact-section-top' class, for education in the homepage*/
 .compact-section-top {
   /* Use padding instead of margin for a more stable layout */
-  padding-top: 0 !important; 
+  padding-top: -3rem !important; 
 }

@@ -31,7 +31,7 @@ sections:
         shape: circle # Options: circle (default), square, rounded
       # spacing:
       # # Padding is [Top, Right, Bottom, Left].
-      #   padding: ["4", "0", "0", "0"]
+        padding: ["3", "0", "0", "0"]
   - block: features
     content:
       title: ''
