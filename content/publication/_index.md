@@ -12,16 +12,23 @@ banner:
   image: ''
 
 sections:
-  # - block: collection
-  #   content:
-  #     title: Selected Works
-  #     filters:
-  #       folders:
-  #         - publication
-  #       featured_only: true
-  #   design:
-  #     view: article-grid
-  #     columns: 2
+  - block: collection
+    content:
+      title: Selected Works
+      filters:
+        folders:
+          - publication
+        featured_only: true
+    design:
+      view: article-grid
+      columns: 2
+  - block: custom_publications
+    content:
+    # to change hardcoded title, go to layouts/partials/hbx/blocks/custom_publications/block.html, search the title up and change, on the top of the file
+      title: "Full List"
+    design:
+      columns: "1"
+   # normal citation form
   # - block: collection
   #   content:
   #     title: Full List
@@ -32,11 +39,4 @@ sections:
   #       exclude_featured: false
   #   design:
       # view: citation
-      # ADD this new block instead
-  - block: custom_publications
-    content:
-    # to change hardcoded title, go to layouts/partials/hbx/blocks/custom_publications/block.html, search the title up and change, on the top of the file
-      title: "Full List"
-    design:
-      columns: "1"
 ---
