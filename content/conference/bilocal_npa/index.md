@@ -4,13 +4,13 @@ title: Characterizing quantum bilocal networks with generalized NPA hierarchies
 event: Hugo Blox Builder Conference
 event_url: https://example.org
 
-location: Hugo Blox Builder HQ
-address:
-  street: 450 Serra Mall
-  city: Stanford
-  region: CA
-  postcode: '94305'
-  country: United States
+# location: ''
+# address:
+#   street: ''
+#   city: ''
+#   region: ''
+#   postcode: ''
+#   country: ''
 
 summary: Talks and posters on my work on quantum bilocal network scenarios.
 abstract: |
@@ -34,7 +34,7 @@ tags: [Bilocal network, generalized NPA hierarchy, scalar extension, bilocal fac
 featured: false
 
 image:
-  caption: 'Image credit: [**YQIS24**](YQIS_6_Nov.png)'
+  caption: 'Image credit: [**myself :D**]()'
   focal_point: Right
 
 links:
@@ -62,27 +62,47 @@ projects: []
 
 <!-- {{% callout note %}}
 {{% /callout %}} -->
+
+<div class="talk-multi-venues">
+
+<style>
+/* Smaller superscript refs (the little numbers in-text) */
+.talk-multi-venues a[role="doc-noteref"],
+.talk-multi-venues sup.footnote-ref {
+  font-size: .75em;
+}
+
+/* Smaller footnote block at the bottom + muted color */
+.talk-multi-venues .footnotes {
+  font-size: .9rem;
+  color: #6b7280; /* gray-500 */
+}
+.talk-multi-venues .footnotes hr { display: none; }
+</style>
+
 <p class="text-sm text-gray-500 dark:text-gray-400">
-This talk has been presented at multiple venues. The date above is set to the most recent instance for correct ordering in the Talks list. Materials (slides/poster) are shared with minor venue-specific tweaks.
+This talk has been presented at multiple venues. The date above is set to the most recent instance for correct ordering in the Talks list.
 </p>
 
-### Talks
-| Date (YYYY-MM) | Event | Host / Location | Type |
+## Talks given
+| Date | Event | Host / Location | Type |
 |---|---|---|---|
-| 2024-09 | **CausalWorlds**[^cw] | Perimeter Institute, Waterloo (CA) | Contributed talk |
-| 2023-11 | **Defi EQIP**[^eqip] | Inria Lyon, Lyon (FR) | Contributed talk |
-| 2023-10 | **Saclay Quantum Seminar** | Inria Saclay, Palaiseau (FR) | Invited talk |
+| 2024-09 | **CausalWorlds**[^cw] | Perimeter Institute, Waterloo (CA) | Contributed |
+| 2023-11 | **Defi EQIP**[^eqip] | Inria Lyon, Lyon (FR) | Contributed |
+| 2023-10 | **Saclay Quantum Seminar** | Inria Saclay, Palaiseau (FR) | Invited |
 
-### Posters
-| Date (YYYY-MM) | Event | Host / Location | Type |
-|---|---|---|---|
-| 2024-11 | **YQIS24**[^yqis] | Inria Paris, Paris (FR) | Poster |
-| 2024-11 | **GDR TeQ 2024**[^gdr] | Sorbonne University, Paris (FR) | Poster |
+## Poster sessions
+| Date | Event | Host / Location |
+|---|---|---|
+| 2024-11 | **YQIS24**[^yqis] | Inria Paris, Paris (FR) |
+| 2024-11 | **GDR TeQ 2024**[^gdr] | Sorbonne University, Paris (FR) |
 
 *Also presented at various internal group meetings during research visits.*
 
-[^cw]: Event site: <https://events.perimeterinstitute.ca/event/69/>
-[^eqip]: Event site: <https://perso.ens-lyon.fr/omar.fawzi/defi-eqip-2023.html>
-[^yqis]: Event site: <https://yqis24.sciencesconf.org>
-[^gdr]: Event site: <https://gdrteq2024.sciencesconf.org/>
+[^cw]: <https://events.perimeterinstitute.ca/event/69/>
+[^eqip]: <https://perso.ens-lyon.fr/omar.fawzi/defi-eqip-2023.html>
+[^yqis]: <https://yqis24.sciencesconf.org>
+[^gdr]: <https://gdrteq2024.sciencesconf.org/>
+
+</div>
 
