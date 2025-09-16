@@ -1,7 +1,7 @@
-name: Deploy Hugo Site to GitHub Pages
+name: Deploy Hugo site to GitHub Pages
 
 env:
-  NODE_VERSION: '20'  # Moved first
+  NODE_VERSION: '20'  # Moved first to avoid precedence issues
   WC_HUGO_VERSION: '0.148.2'
 
 on:
@@ -22,7 +22,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
@@ -39,7 +39,18 @@ jobs:
           hugo-version: ${{ env.WC_HUGO_VERSION }}
           extended: true
 
-      - name: Build
+      - name: Install Tailwind CSS CLI
+        run: npm install -D tailwindcss@latest @tailwindcss/postcss
+
+      - name: Install dependencies
+        run: |
+          if [ -f "package.json" ]; then
+            npm install
+          fi
+
+      - name: Build with Hugo
+        env:
+          HUGO_ENVIRONMENT: production
         run: hugo --minify
 
       - name: Upload artifact
