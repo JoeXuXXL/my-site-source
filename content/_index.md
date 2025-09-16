@@ -33,22 +33,62 @@ sections:
     content:
       title: "Education"
       text: |
-        **PhD Informatique**  
-        Inria Paris-Saclay & Institut Polytechnique de Paris, France  
-        *2023 - Present*  
-        Supervised by Prof. Marc-Olivier Renou
+        <div class="education-grid">
+          <!-- PhD -->
+          <div class="education-item">
+            <div class="education-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path d="M12 14l9-5-9-5-9 5 9 5z" />
+                <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l-9 5m9-5v6" />
+              </svg>
+            </div>
+            <div class="education-content">
+              <h3 class="education-title">PhD Informatique</h3>
+              <p class="education-institution">Inria Paris-Saclay & Institut Polytechnique de Paris</p>
+              <p class="education-location">France</p>
+              <p class="education-dates">2023 - Present</p>
+              <p class="education-description">Supervised by Prof. Marc-Olivier Renou</p>
+            </div>
+          </div>
 
-        **MSc Mathematics**  
-        ETH Zürich, Switzerland  
-        *2020 - 2023*
+          <!-- MSc -->
+          <div class="education-item">
+            <div class="education-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path d="M12 14l9-5-9-5-9 5 9 5z" />
+                <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l-9 5m9-5v6" />
+              </svg>
+            </div>
+            <div class="education-content">
+              <h3 class="education-title">MSc Mathematics</h3>
+              <p class="education-institution">ETH Zürich</p>
+              <p class="education-location">Switzerland</p>
+              <p class="education-dates">2020 - 2023</p>
+            </div>
+          </div>
 
-        **BSc Mathematics and Physics**  
-        University of Toronto, Canada  
-        *2016 - 2020*
+          <!-- BSc -->
+          <div class="education-item">
+            <div class="education-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path d="M12 14l9-5-9-5-9 5 9 5z" />
+                <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l-9 5m9-5v6" />
+              </svg>
+            </div>
+            <div class="education-content">
+              <h3 class="education-title">BSc Mathematics and Physics</h3>
+              <p class="education-institution">University of Toronto</p>
+              <p class="education-location">Canada</p>
+              <p class="education-dates">2016 - 2020</p>
+            </div>
+          </div>
+        </div>
     design:
       columns: "1"
-      # Optional: Add background or spacing
-      css_class: bg-slate-50 rounded-lg p-6
+      css_class: education-section
 
   # - block: resume-experience
   #   content:

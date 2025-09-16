@@ -11,7 +11,7 @@ banner:
   caption: ''
   image: ''
 
-Content:
+content:
   - block: collection
     id: papers
     content:
