@@ -49,6 +49,10 @@ sections:
       # This ensures the background color matches the rest of the page.
       # You can also use 'hbx-bg-gradient' or other classes if you prefer.
       css_class: compact-section-top g-gradient-to-b from-sky-250 via-sky-100 to-white dark:from-slate-800 dark:via-sky-900 dark:to-slate-950
+      spacing:
+        # Padding: [Top, Right, Bottom, Left]
+        # Set the bottom padding (third value) to "0"
+        padding: ["0", "0", "0", "0"]```
   
   # - block: markdown
   #   content:
