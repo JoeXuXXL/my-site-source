@@ -10,6 +10,7 @@ publication_types:
 - article-journal
 publication: '*Monthly Notices of the Royal Astronomical Society*'
 hugoblox.ids: { doi: https://doi.org/10.1093/mnras/stac3500 }
+doi: https://doi.org/10.1093/mnras/stac3500
 abstract: |
   In this paper, we report an interesting kinematic phenomenon around the
   halos' edge related to the splashback radius. After the shell-crossing, cosmic flow
@@ -24,4 +25,7 @@ abstract: |
   the profile of flow morphology is purely kinematic. And unlike other related studies,
   the rotational flow morphologies capture the anisotropic phase structure in the
   multi-stream region.
+links:
+- name: arXiv
+  url: https://arxiv.org/abs/2209.06488
 ---

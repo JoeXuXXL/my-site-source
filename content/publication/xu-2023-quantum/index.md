@@ -8,6 +8,7 @@ publication_types:
 - thesis
 publication: 'ETH Library Research Collection'
 hugoblox.ids: { doi: https://doi.org/10.3929/ethz-b-000613670 }
+doi: https://doi.org/10.3929/ethz-b-000613670
 abstract: |
   In this thesis, we explore the applications of the theory of operator algebras,
   such as C ∗ -algebras and von Neumann algebras, in quantum physics with a focus
