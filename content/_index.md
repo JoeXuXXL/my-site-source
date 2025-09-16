@@ -24,7 +24,7 @@ sections:
         interests: Research Interests
     design:
       # Apply a gradient background
-      css_class: g-gradient-to-b from-sky-100 via-white to-white dark:from-slate-800 dark:via-sky-950 dark:to-slate-950  # hbx-bg-gradient
+      css_class: g-gradient-to-b from-sky-200 via-sky-50 to-white dark:from-slate-800 dark:via-sky-900 dark:to-slate-950  # hbx-bg-gradient
       # Avatar customization
       avatar:
         size: large # Options: small (150px), medium (200px, default), large (320px), xl (400px), xxl (500px)
@@ -46,7 +46,7 @@ sections:
         *University of Toronto*  
         Canada • 2016–2020
     design:
-      columns: "1"
+      columns: "3"
       css_class: g-gradient-to-b from-sky-100 via-white to-white dark:from-slate-800 dark:via-sky-950 dark:to-slate-950
 
   # - block: resume-experience
