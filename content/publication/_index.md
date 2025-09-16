@@ -22,14 +22,21 @@ sections:
   #   design:
   #     view: article-grid
   #     columns: 2
-  - block: collection
+  # - block: collection
+  #   content:
+  #     title: Full List
+  #     text: ''
+  #     filters:
+  #       folders:
+  #         - publication
+  #       exclude_featured: false
+  #   design:
+      # view: citation
+      # ADD this new block instead
+  - block: custom_publications
     content:
-      title: Full List
-      text: ''
-      filters:
-        folders:
-          - publication
-        exclude_featured: false
+      title: Publications
     design:
-      view: mycitation
+      # This block is full-width, no columns needed.
+      columns: '1'
 ---

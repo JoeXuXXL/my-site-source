@@ -1,0 +1,76 @@
+{{/*
+  layouts/partials/blocks/custom_publications.html
+  A self-contained block to display publications grouped by year.
+*/}}
+
+{{ $block := . }}
+
+<div class="container-fluid">
+  {{ with $block.Content.title }}
+  <div class="relative mb-12 text-center">
+    <h1 class="text-4xl font-bold tracking-tight">{{ . }}</h1>
+    <div class="absolute left-1/2 -translate-x-1/2 -bottom-3 h-1 w-24 bg-primary-500"></div>
+  </div>
+  {{ end }}
+  
+  {{/* 1. Fetch all pages from the 'publication' folder and sort them */}}
+  {{ $pages := where site.RegularPages "Type" "publication" }}
+  {{ $sorted_pages := $pages.ByDate.Reverse }}
+  
+  {{/* 2. Group the sorted pages by year */}}
+  {{ $groups := $sorted_pages.GroupByDate "2006" }}
+
+  <!-- Main container for all years -->
+  <div class="space-y-12">
+    {{ range $groups }}
+      <!-- Year Heading -->
+      <div class="relative">
+        <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">{{ .Key }}</h2>
+        <div class="absolute -bottom-2 h-0.5 w-16 bg-primary-500"></div>
+      </div>
+
+      <!-- Container for papers within a single year -->
+      <div class="mt-6 space-y-8">
+        {{ range $index, $page := .Pages }}
+          {{ $params := $page.Params }}
+          {{ $item_number := sub (len .Pages) $index }}
+
+          <div class="flex items-start space-x-4">
+            <!-- Publication number -->
+            <div class="flex-shrink-0 text-lg font-medium text-gray-500 dark:text-gray-400 w-12 text-right">
+              [P{{ $item_number }}]
+            </div>
+            
+            <div class="flex-grow">
+              <!-- Title -->
+              <h3 class="text-xl font-semibold leading-snug">
+                <a href="{{ $page.RelPermalink }}" class="text-gray-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400">{{ $page.Title }}</a>
+              </h3>
+
+              <!-- Authors (with your name bolded) -->
+              <div class="mt-1 text-base text-gray-600 dark:text-gray-400">
+                {{ $authors := delimit $params.authors ", " | markdownify }}
+                {{ $authors_processed := replace $authors "Xiangling Xu" "**Xiangling Xu**" }}
+                {{ $authors_processed | safeHTML }}
+              </div>
+
+              <!-- Publication Venue -->
+              {{ with $params.publication }}
+              <div class="mt-1 text-base italic text-gray-500 dark:text-gray-500">
+                {{ . | markdownify }}
+              </div>
+              {{ end }}
+              
+              <!-- Action Links (parsed from existing front matter) -->
+              <div class="mt-3 flex flex-wrap gap-3">
+                {{ with $page.GetPage "cite.bib" }}<a class="btn btn-xs" href="{{ .RelPermalink }}" target="_blank">Cite</a>{{ end }}
+                {{ with $params.hugoblox.ids.doi }}<a class="btn btn-xs" href="{{ . }}" target="_blank" rel="noopener">DOI</a>{{ end }}
+                {{ range $params.links }}{{ if eq .name "arXiv" }}<a class="btn btn-xs" href="{{ .url }}" target="_blank" rel="noopener">arXiv</a>{{ else if eq .name "PDF" }}<a class="btn btn-xs" href="{{ .url }}" target="_blank" rel="noopener">PDF</a>{{ end }}{{ end }}
+              </div>
+            </div>
+          </div>
+        {{ end }}
+      </div>
+    {{ end }}
+  </div>
+</div>
