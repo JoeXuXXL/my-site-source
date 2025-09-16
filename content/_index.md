@@ -29,25 +29,42 @@ sections:
       avatar:
         size: large # Options: small (150px), medium (200px, default), large (320px), xl (400px), xxl (500px)
         shape: circle # Options: circle (default), square, rounded
-  - block: markdown
+  - block: custom_education
     content:
       title: "Education"
-      text: |
-        **🎓 PhD in Informatique**  
-        *Inria Paris-Saclay & Institut Polytechnique de Paris*  
-        France • 2023–Present  
-        Supervised by Prof. Marc-Olivier Renou
-
-        **🎓 MSc in Mathematics**  
-        *ETH Zürich*  
-        Switzerland • 2020–2023
-
-        **🎓 BSc in Mathematics and Physics**  
-        *University of Toronto*  
-        Canada • 2016–2020
+      items:
+        - title: "PhD in Informatique"
+          institution: "Inria Paris-Saclay & Institut Polytechnique de Paris"
+          location: "France • 2023–Present"
+          supervisor: "Supervised by Prof. Marc-Olivier Renou"
+        - title: "MSc in Mathematics"
+          institution: "ETH Zürich"
+          location: "Switzerland • 2020–2023"
+        - title: "BSc in Mathematics and Physics"
+          institution: "University of Toronto"
+          location: "Canada • 2016–2020"
     design:
-      columns: "3"
-      css_class: g-gradient-to-b from-sky-100 via-white to-white dark:from-slate-800 dark:via-sky-950 dark:to-slate-950
+      # This will be used to style the section
+      css_class: 'compact-education'
+  # - block: markdown
+  #   content:
+  #     title: "Education"
+  #     text: |
+  #       **🎓 PhD in Informatique**  
+  #       *Inria Paris-Saclay & Institut Polytechnique de Paris*  
+  #       France • 2023–Present  
+  #       Supervised by Prof. Marc-Olivier Renou
+
+  #       **🎓 MSc in Mathematics**  
+  #       *ETH Zürich*  
+  #       Switzerland • 2020–2023
+
+  #       **🎓 BSc in Mathematics and Physics**  
+  #       *University of Toronto*  
+  #       Canada • 2016–2020
+  #   design:
+  #     columns: "3"
+  #     css_class: g-gradient-to-b from-sky-200 via-sky-50 to-white dark:from-slate-800 dark:via-sky-900 dark:to-slate-950
 
   # - block: resume-experience
   #   content:
