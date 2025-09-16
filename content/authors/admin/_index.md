@@ -36,9 +36,7 @@ profiles:
   - icon: envelope # at-symbol
     url: 'mailto:xu[dot]xiangling[at]inria[dot]fr'
     # label: xu[dot]xiangling[at]inria[dot]fr
-    label: E-mail Me
-  # - icon: brands/github
-  #   url: https://github.com/xiangling-xu
+    label: E-mail me
   - icon: academicons/google-scholar
     url: https://scholar.google.com/citations?user=cI2Q634AAAAJ&hl=en
     label: Google Scholar
@@ -48,6 +46,8 @@ profiles:
   - icon: academicons/orcid
     url: https://orcid.org/0009-0009-9213-3049
     label: ORCID
+  # - icon: brands/github
+  #   url: https://github.com/xiangling-xu
 
 interests:
   - Quantum information
