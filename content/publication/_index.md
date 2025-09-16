@@ -35,6 +35,7 @@ sections:
       # ADD this new block instead
   - block: custom_publications
     content:
+    # to change hardcoded title, go to layouts/partials/hbx/blocks/custom_publications/block.html, search the title up and change, on the top of the file
       title: "Full List"
     design:
       columns: "1"

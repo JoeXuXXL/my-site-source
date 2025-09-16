@@ -1,23 +1,20 @@
 {{/*
   layouts/partials/hbx/blocks/custom_publications/block.html
-  COMPLETE FIXED VERSION - With proper title display and custom SVG icons
+  FIXED VERSION - Using Academicons for all academic icons and consistent document-duplicate icon
 */}}
 
 {{ $block := . }}
 
 <div class="container mx-auto px-4">
-  {{/* Debug: Check block content structure */}}
+  {{/* Debug: Uncomment to check block structure if title still doesn't appear */}}
   {{/* {{ printf "%#v" $block | safeHTML }} */}}
   
-  {{/* Fixed title access from block parameters */}}
+  {{/* Title access from block parameters */}}
   {{ with $block.content.title }}
     <div class="relative mb-12 text-center">
       <h1 class="text-4xl font-bold tracking-tight">{{ . }}</h1>
       <div class="absolute left-1/2 -translate-x-1/2 -bottom-3 h-1 w-24 bg-primary-500"></div>
     </div>
-  {{ else }}
-    {{/* Debug output if title is missing */}}
-    {{/* <div class="hidden">Block title not found in: {{ printf "%#v" $block.content }}</div> */}}
   {{ end }}
 
   {{ $pages := where site.RegularPages "Type" "publication" }}
@@ -69,7 +66,7 @@
               
               <!-- Action links with specific icons -->
               <div class="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm font-medium text-gray-500 dark:text-gray-400">
-                <!-- 'cite.bib' link with custom document-duplicate SVG icon -->
+                <!-- 'cite.bib' link with document-duplicate SVG icon -->
                 {{ with $page.Resources.Get "cite.bib" }}
                   <a href="{{ .RelPermalink }}" target="_blank" class="hover:text-primary-600 dark:hover:text-primary-400 flex items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 mr-1">
@@ -79,30 +76,30 @@
                   </a>
                 {{ end }}
                 
-                <!-- DOI link with Academicons 'doi' icon -->
+                <!-- DOI link with document-duplicate SVG icon (your requested change) -->
                 {{ with $params.doi }}
                   <a href="https://doi.org/{{ . }}" target="_blank" rel="noopener" class="hover:text-primary-600 dark:hover:text-primary-400 flex items-center">
-                    <i class="ai ai-doi mr-1"></i>DOI
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 mr-1">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75" />
+                    </svg>
+                    DOI
                   </a>
                 {{ else }}
                   {{ with $params.hugoblox.ids.doi }}
                   <a href="https://doi.org/{{ . }}" target="_blank" rel="noopener" class="hover:text-primary-600 dark:hover:text-primary-400 flex items-center">
-                    <i class="ai ai-doi mr-1"></i>DOI
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 mr-1">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75" />
+                    </svg>
+                    DOI
                   </a>
                   {{ end }}
                 {{ end }}
                 
-                <!-- Loop through 'links' array for arXiv, PDF, URL, and other types -->
+                <!-- Loop through 'links' array using Academicons for consistent styling -->
                 {{ range $params.links }}
                   {{ if eq .name "arXiv" }}
                     <a href="{{ .url }}" target="_blank" rel="noopener" class="hover:text-primary-600 dark:hover:text-primary-400 flex items-center">
-                      {{ $arxivIcon := resources.Get "media/icons/custom/arxiv.svg" }}
-                      {{ if $arxivIcon }}
-                        <span class="mr-1" style="width: 1em; height: 1em;">{{ $arxivIcon.Content | safeHTML }}</span>
-                      {{ else }}
-                        <i class="ai ai-arxiv mr-1"></i>
-                      {{ end }}
-                      arXiv
+                      <i class="ai ai-arxiv mr-1"></i>arXiv
                     </a>
                   {{ else if eq .name "PDF" }}
                     <a href="{{ .url }}" target="_blank" rel="noopener" class="hover:text-primary-600 dark:hover:text-primary-400 flex items-center">
