@@ -9,7 +9,7 @@ publishDate: '2025-09-15T00:57:04.117650Z'
 publication_types:
 - article-journal
 publication: '*Monthly Notices of the Royal Astronomical Society*'
-doi: https://doi.org/10.1093/mnras/stac3500
+hugoblox.ids: { doi: https://doi.org/10.1093/mnras/stac3500 }
 abstract: |
   In this paper, we report an interesting kinematic phenomenon around the
   halos' edge related to the splashback radius. After the shell-crossing, cosmic flow
