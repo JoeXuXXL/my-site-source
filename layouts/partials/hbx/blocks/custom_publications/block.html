@@ -5,11 +5,14 @@
 
 {{ $block := . }}
 
-  <!-- FIX: Hardcoded title as requested for reliability. Change this if needed in future! -->
-  <div class="relative mb-12 text-center">
-    <h1 class="text-4xl font-bold tracking-tight">Full List</h1>
-    <div class="absolute left-1/2 -translate-x-1/2 -bottom-3 h-1 w-24 bg-primary-500"></div>
-  </div>
+<div class="container mx-auto px-4">
+  {{/* Using the direct context variable for the title block */}}
+  {{ with $block.Content.title }}
+    <div class="relative mb-12 text-center">
+      <h1 class="text-4xl font-bold tracking-tight">{{ . }}</h1>
+      <div class="absolute left-1/2 -translate-x-1/2 -bottom-3 h-1 w-24 bg-primary-500"></div>
+    </div>
+  {{ end }}
   
   {{ $pages := where site.RegularPages "Type" "publication" }}
   {{ $sorted_pages := $pages.ByDate.Reverse }}

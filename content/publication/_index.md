@@ -35,7 +35,7 @@ sections:
       # ADD this new block instead
   - block: custom_publications
     content:
-      title: Publications
+      title: Full List
     design:
       # This block is full-width, no columns needed.
       columns: '1'
