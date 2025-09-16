@@ -34,5 +34,5 @@
 
 /* Reduces the top padding for any section with the 'compact-section-top' class */
 .compact-section-top {
-  padding-top: 2rem !important; /* The default is usually 6rem */
+  padding-top: 0rem !important; /* The default is usually 6rem */
 }
