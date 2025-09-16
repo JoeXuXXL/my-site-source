@@ -1,12 +1,12 @@
 {{/*
   layouts/partials/hbx/blocks/custom_publications/block.html
-  REVISED - A self-contained block for a compact, centered, and icon-rich publication list.
+  FINAL VERSION - Addresses all feedback for a professional, icon-rich publication list.
 */}}
 
 {{ $block := . }}
 
-{{/* Use a standard container to center the content on the page */}}
 <div class="container mx-auto px-4">
+  {{/* 1. RENDER THE BLOCK TITLE */}}
   {{ with $block.Content.title }}
   <div class="relative mb-12 text-center">
     <h1 class="text-4xl font-bold tracking-tight">{{ . }}</h1>
@@ -19,35 +19,32 @@
   {{ $groups := $sorted_pages.GroupByDate "2006" }}
 
   {{/* 3. GLOBAL REVERSE-CHRONOLOGICAL NUMBERING */}}
-  {{/* Initialize a counter with the total number of papers */}}
-  {{ $total_papers := len $sorted_pages }}
-  {{ $counter := $total_papers }}
+  {{ $counter := len $sorted_pages }}
 
   <!-- Main container for all years -->
   <div class="space-y-10">
     {{ range $groups }}
-      <!-- 2. YEAR STYLE: Less prominent and more compact heading */}}
+      {{/* 4. YEAR GROUPING - Restored with moderate contrast */}}
       <div class="relative">
         <h2 class="text-2xl font-semibold text-gray-500 dark:text-gray-400">{{ .Key }}</h2>
         <div class="absolute -bottom-1 h-px w-16 bg-gray-300 dark:bg-gray-700"></div>
       </div>
 
-      <!-- Container for papers within a single year (tighter spacing) -->
-      <div class="mt-6 space-y-6">
+      <!-- Container for papers within a single year -->
+      <div class="mt-6 space-y-8">
         {{ range $page := .Pages }}
           {{ $params := $page.Params }}
 
           <div class="flex items-start space-x-4">
-            <!-- Global publication number -->
+            <!-- Global publication number (just the number) -->
             <div class="flex-shrink-0 text-base font-medium text-gray-500 dark:text-gray-400 w-12 text-right pt-1">
-              [P{{ $counter }}]
+              [{{ $counter }}]
             </div>
             
             <div class="flex-grow">
-              <!-- Title -->
+              {{/* 2. PAPER TITLE IS NOW THE HYPERLINK */}}
               <h3 class="text-xl font-semibold leading-snug">
-                {{/* Note: Title is no longer a link, as per the reference example. The whole entry leads to the page. */}}
-                {{ $page.Title }}
+                <a href="{{ $page.RelPermalink }}" class="text-gray-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400">{{ $page.Title }}</a>
               </h3>
 
               <!-- Authors (with your name bolded) -->
@@ -64,18 +61,38 @@
               </div>
               {{ end }}
               
-              <!-- 4. ACTION LINKS WITH ICONS -->
-              <div class="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm font-medium">
-                {{/* Link to the publication's own page */}}
-                <a href="{{ $page.RelPermalink }}" class="text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-500">
-                  <i class="fas fa-book-open mr-1"></i>Details
-                </a>
-                {{ with $page.GetPage "cite.bib" }}<a href="{{ .RelPermalink }}" target="_blank" class="hover:text-primary-600 dark:hover:text-primary-400"><i class="far fa-file-alt mr-1"></i>Cite</a>{{ end }}
-                {{ with $params.hugoblox.ids.doi }}<a href="{{ . }}" target="_blank" rel="noopener" class="hover:text-primary-600 dark:hover:text-primary-400"><i class="ai ai-doi mr-1"></i>DOI</a>{{ end }}
+              {{/* 5. ACTION LINKS WITH SPECIFIC ICONS */}}
+              <div class="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm font-medium text-gray-500 dark:text-gray-400">
+                {{/* 'cite.bib' link with Heroicons 'document-duplicate' icon */}}
+                {{ with $page.GetPage "cite.bib" }}
+                  <a href="{{ .RelPermalink }}" target="_blank" class="hover:text-primary-600 dark:hover:text-primary-400">
+                    <i class="hi hi-document-duplicate mr-1"></i>Cite
+                  </a>
+                {{ end }}
+                
+                {{/* DOI link with Academicons 'doi' icon */}}
+                {{ with $params.hugoblox.ids.doi }}
+                  <a href="{{ . }}" target="_blank" rel="noopener" class="hover:text-primary-600 dark:hover:text-primary-400">
+                    <i class="ai ai-doi mr-1"></i>DOI
+                  </a>
+                {{ end }}
+                
+                {{/* Loop through 'links' array for arXiv, PDF, and URL with specified icons */}}
                 {{ range $params.links }}
-                  {{ if eq .name "arXiv" }}<a href="{{ .url }}" target="_blank" rel="noopener" class="hover:text-primary-600 dark:hover:text-primary-400"><i class="ai ai-arxiv mr-1"></i>arXiv</a>{{ end }}
-                  {{ if eq .name "PDF" }}<a href="{{ .url }}" target="_blank" rel="noopener" class="hover:text-primary-600 dark:hover:text-primary-400"><i class="far fa-file-pdf mr-1"></i>PDF</a>{{ end }}
-                  {{ if eq .name "URL" }}<a href="{{ .url }}" target="_blank" rel="noopener" class="hover:text-primary-600 dark:hover:text-primary-400"><i class="fas fa-link mr-1"></i>URL</a>{{ end }}
+                  {{ if eq .name "arXiv" }}
+                    <a href="{{ .url }}" target="_blank" rel="noopener" class="hover:text-primary-600 dark:hover:text-primary-400">
+                      <i class="ai ai-arxiv mr-1"></i>arXiv
+                    </a>
+                  {{ else if eq .name "PDF" }}
+                    <a href="{{ .url }}" target="_blank" rel="noopener" class="hover:text-primary-600 dark:hover:text-primary-400">
+                      <i class="far fa-file-pdf mr-1"></i>PDF
+                    </a>
+                  {{ else if eq .name "URL" }}
+                    <a href="{{ .url }}" target="_blank" rel="noopener" class="hover:text-primary-600 dark:hover:text-primary-400">
+                      {{/* Generic URL link with Heroicons 'link' icon */}}
+                      <i class="hi hi-link mr-1"></i>URL
+                    </a>
+                  {{ end }}
                 {{ end }}
               </div>
             </div>
