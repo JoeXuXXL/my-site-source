@@ -26,5 +26,5 @@
 /* Reduces the top padding for any section with the 'compact-section-top' class, for education in the homepage*/
 .compact-section-top {
   /* translateY moves an element up or down. Negative values go up. */
-  transform: translateY(-6rem) !important;
+  transform: translateY(-10rem) !important;
 }
