@@ -5,14 +5,11 @@
 
 {{ $block := . }}
 
-<div class="container mx-auto px-4">
-  {{/* Using the direct context variable for the title block */}}
-  {{ with $block.Content.title }}
-    <div class="relative mb-12 text-center">
-      <h1 class="text-4xl font-bold tracking-tight">{{ . }}</h1>
-      <div class="absolute left-1/2 -translate-x-1/2 -bottom-3 h-1 w-24 bg-primary-500"></div>
-    </div>
-  {{ end }}
+  <!-- FIX: Hardcoded title as requested for reliability. Change this if needed in future! -->
+  <div class="relative mb-12 text-center">
+    <h1 class="text-4xl font-bold tracking-tight">Full List</h1>
+    <div class="absolute left-1/2 -translate-x-1/2 -bottom-3 h-1 w-24 bg-primary-500"></div>
+  </div>
   
   {{ $pages := where site.RegularPages "Type" "publication" }}
   {{ $sorted_pages := $pages.ByDate.Reverse }}
@@ -71,7 +68,7 @@
                 {{ end }}
                 
                 {{/* DOI link with Academicons 'doi' icon */}}
-                {{ with $params.hugoblox.ids.doi }}
+                {{ with (index $params.hugoblox.ids "doi") }}
                   <a href="{{ . }}" target="_blank" rel="noopener" class="hover:text-primary-600 dark:hover:text-primary-400">
                     <i class="ai ai-doi mr-1"></i>DOI
                   </a>
