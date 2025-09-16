@@ -38,9 +38,18 @@
 }
 
 /*
+  Fixes unclickable links in the biography section when the section
+  below it is pulled up with a negative transform.
+*/
+.biography-on-top {
+  position: relative; /* This is required for z-index to work */
+  z-index: 10;        /* This brings the entire block to a higher layer */
+}
+
+/*
   Targets the footer, but ONLY on the homepage (which now has our 'is-homepage' class).
   This will NOT affect the footer on any other page.
 */
-.is-homepage .site-footer {
+/* .is-homepage .site-footer {
   padding-top: -5rem !important; /* Adjust this value as needed */
-}
+} */

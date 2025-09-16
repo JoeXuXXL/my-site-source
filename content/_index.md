@@ -5,11 +5,11 @@ date: 2025-09-14
 type: landing
 
 # ADD THIS CASCADE BLOCK TO GIVE THE HOMEPAGE A UNIQUE CLASS
-cascade:
-  - _target:
-      kind: page
-    params:
-      page_css_class: is-homepage
+# cascade:
+#   - _target:
+#       kind: page
+#     params:
+#       page_css_class: is-homepage
 
 design:
   # Default section spacing
@@ -31,7 +31,7 @@ sections:
         interests: Research Interests
     design:
       # Apply a gradient background
-      css_class: g-gradient-to-b from-sky-250 via-sky-100 to-white dark:from-slate-800 dark:via-sky-900 dark:to-slate-950  # hbx-bg-gradient
+      css_class: biography-on-top g-gradient-to-b from-sky-250 via-sky-100 to-white dark:from-slate-800 dark:via-sky-900 dark:to-slate-950  # hbx-bg-gradient
       # Avatar customization
       avatar:
         size: large # Options: small (150px), medium (200px, default), large (320px), xl (400px), xxl (500px)
