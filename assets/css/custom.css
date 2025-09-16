@@ -31,3 +31,8 @@
 .dark .compact-education .bg-gray-800 {
     background-color: #1f2937; /* A dark blue-gray */
 }
+
+/* Reduces the top padding for any section with the 'compact-section-top' class */
+.compact-section-top {
+  padding-top: 2rem !important; /* The default is usually 6rem */
+}

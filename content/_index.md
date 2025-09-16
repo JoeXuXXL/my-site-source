@@ -31,7 +31,7 @@ sections:
         shape: circle # Options: circle (default), square, rounded
   - block: features
     content:
-      title: Education
+      title: ''
       # The 'features' block is responsive. It will be 3 columns on large screens,
       # and automatically adjust to 2 or 1 column on smaller screens.
       columns: '3'
@@ -48,30 +48,8 @@ sections:
     design:
       # This ensures the background color matches the rest of the page.
       # You can also use 'hbx-bg-gradient' or other classes if you prefer.
-      css_class: g-gradient-to-b from-sky-250 via-sky-100 to-white dark:from-slate-800 dark:via-sky-900 dark:to-slate-950
-  # - block: resume-experience
-  #   content:
-  #     title: "Education"
-  #     items:
-  #       - title: "PhD Infomatique"
-  #         company: "Inria Paris-Saclay & Institut Polytechnique de Paris"
-  #         location: "France"
-  #         date_start: "2023-10-01"
-  #         date_end: ""
-  #         description: |
-  #           Supervised by Prof. Marc-Olivier Renou
-  #       - title: "MSc Mathematics"
-  #         company: "Eidgenössische Technische Hochschule (ETH) Zürich"
-  #         location: "Switzerland"
-  #         date_start: "2020-09-15"
-  #         date_end: "2023-06-03"
-  #       - title: "BSc Mathematics and Physics"
-  #         company: "University of Toronto"
-  #         location: "Canada"
-  #         date_start: "2016-09-01"
-  #         date_end: "2020-05-31"
-  #   design:
-  #     columns: "1"
+      css_class: compact-section-top g-gradient-to-b from-sky-250 via-sky-100 to-white dark:from-slate-800 dark:via-sky-900 dark:to-slate-950
+  
   # - block: markdown
   #   content:
   #     title: 'About me'
