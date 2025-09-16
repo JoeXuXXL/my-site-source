@@ -24,7 +24,7 @@ sections:
         interests: Research Interests
     design:
       # Apply a gradient background
-      css_class: g-gradient-to-b from-sky-200 via-sky-50 to-white dark:from-slate-800 dark:via-sky-900 dark:to-slate-950  # hbx-bg-gradient
+      css_class: g-gradient-to-b from-sky-250 via-sky-100 to-white dark:from-slate-800 dark:via-sky-900 dark:to-slate-950  # hbx-bg-gradient
       # Avatar customization
       avatar:
         size: large # Options: small (150px), medium (200px, default), large (320px), xl (400px), xxl (500px)
@@ -37,17 +37,17 @@ sections:
       columns: '3'
       items:
         - name: '**PhD in Informatique**'
-          description: '*Inria Paris-Saclay & Institut Polytechnique de Paris*<br>France • 2023–Present<br>Supervised by Prof. Marc-Olivier Renou'
-          icon: graduation-cap
-          icon_pack: fas
+          description: '<span class="text-lg font-semibold text-primary-600 dark:text-primary-400">Inria Paris-Saclay & Institut Polytechnique de Paris</span><br>France • 2023–Present<br>Supervised by Prof. Marc-Olivier Renou'
+          icon: hero/graduation-cap
+          # icon_pack: fas
         - name: '**MSc in Mathematics**'
-          description: '*ETH Zürich*<br>Switzerland • 2020–2023'
-          icon: graduation-cap
-          icon_pack: fas
+          description: '<span class="text-lg font-semibold text-primary-600 dark:text-primary-400">ETH Zürich</span><br>Switzerland • 2020–2023'
+          icon: hero/graduation-cap
+          # icon_pack: fas
         - name: '**BSc in Mathematics and Physics**'
-          description: '*University of Toronto*<br>Canada • 2016–2020'
-          icon: graduation-cap
-          icon_pack: fas
+          description: '<span class="text-lg font-semibold text-primary-600 dark:text-primary-400">University of Toronto</span><br>Canada • 2016–2020'
+          icon: hero/graduation-cap
+          # icon_pack: fas
     design:
       # This ensures the background color matches the rest of the page.
       # You can also use 'hbx-bg-gradient' or other classes if you prefer.
