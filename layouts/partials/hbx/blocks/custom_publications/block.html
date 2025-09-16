@@ -1,107 +1,136 @@
 {{/*
   layouts/partials/hbx/blocks/custom_publications/block.html
-  UPDATED VERSION - Fixes icons, title configuration, and DOI display, by deepseek
+  UPDATED — title from block config, DOI button, per-link icons (incl. Heroicons), robust param fallbacks.
 */}}
 
 {{ $block := . }}
 
+<style>
+  /* keep icons aligned & subtle */
+  .pub-actions a { display:inline-flex; align-items:center; gap:.4rem; }
+  .pub-actions svg { width:1rem; height:1rem; vertical-align:middle; }
+</style>
+
 <div class="container mx-auto px-4">
-  {{/* Fixed title access from block parameters */}}
+  {{/* 1) Title from block config (content.title) */}}
   {{ with $block.content.title }}
     <div class="relative mb-12 text-center">
       <h1 class="text-4xl font-bold tracking-tight">{{ . }}</h1>
       <div class="absolute left-1/2 -translate-x-1/2 -bottom-3 h-1 w-24 bg-primary-500"></div>
     </div>
   {{ end }}
-  
+
+  {{/* Collect & group publications */}}
   {{ $pages := where site.RegularPages "Type" "publication" }}
-  {{ $sorted_pages := $pages.ByDate.Reverse }}
-  {{ $groups := $sorted_pages.GroupByDate "2006" }}
+  {{ $sorted := $pages.ByDate.Reverse }}
+  {{ $groups := $sorted.GroupByDate "2006" }}
+  {{ $counter := len $sorted }}
 
-  {{/* Global reverse-chronological numbering */}}
-  {{ $counter := len $sorted_pages }}
-
-  <!-- Main container for all years -->
   <div class="space-y-3">
     {{ range $groups }}
-      <!-- Year grouping -->
       <div class="relative">
         <h2 class="text-xl font-semibold text-gray-500 dark:text-gray-400">{{ .Key }}</h2>
         <div class="absolute -bottom-1 h-px w-24 bg-gray-300 dark:bg-gray-700"></div>
       </div>
 
-      <!-- Container for papers within a single year -->
       <div class="mt-3 space-y-3">
-        {{ range $page := .Pages }}
-          {{ $params := $page.Params }}
+        {{ range $p := .Pages }}
+          {{ $params := $p.Params }}
 
           <div class="flex items-start space-x-4">
-            <!-- Global publication number -->
             <div class="flex-shrink-0 text-base font-medium text-gray-500 dark:text-gray-400 w-12 text-right pt-1">
               [{{ $counter }}]
             </div>
-            
+
             <div class="flex-grow">
-              <!-- Paper title as hyperlink -->
+              <!-- Title -->
               <h3 class="text-xl font-semibold leading-snug">
-                <a href="{{ $page.RelPermalink }}" class="text-gray-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400">{{ $page.Title }}</a>
+                <a href="{{ $p.RelPermalink }}" class="text-gray-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400">
+                  {{ $p.Title }}
+                </a>
               </h3>
 
-              <!-- Authors (with your name bolded) -->
+              <!-- Authors (bold your name) -->
               <div class="mt-1 text-base text-gray-600 dark:text-gray-400">
                 {{ $authors := delimit $params.authors ", " }}
-                {{ $authors_processed := replace $authors "Xiangling Xu" "**Xiangling Xu**" | markdownify }}
-                {{ $authors_processed | safeHTML }}
+                {{ $authors | replace "Xiangling Xu" "**Xiangling Xu**" | markdownify | safeHTML }}
               </div>
 
-              <!-- Publication Venue -->
+              <!-- Venue -->
               {{ with $params.publication }}
-              <div class="mt-1 text-base italic text-gray-500 dark:text-gray-500">
-                {{ . | markdownify }}
-              </div>
+                <div class="mt-1 text-base italic text-gray-500 dark:text-gray-500">
+                  {{ . | markdownify }}
+                </div>
               {{ end }}
-              
-              <!-- Action links with specific icons -->
-              <div class="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm font-medium text-gray-500 dark:text-gray-400">
-                <!-- 'cite.bib' link with Heroicons 'document-duplicate' icon -->
-                {{ with $page.Resources.Get "cite.bib" }}
-                  <a href="{{ .RelPermalink }}" target="_blank" class="hover:text-primary-600 dark:hover:text-primary-400">
-                    <i class="hi hi-document-duplicate mr-1"></i>Cite
+
+              <!-- Action row -->
+              <div class="pub-actions mt-3 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm font-medium text-gray-500 dark:text-gray-400">
+
+                {{/* 2) Cite (Heroicons: document-duplicate) — uses local resource cite.bib if present */}}
+                {{ with $p.Resources.Get "cite.bib" }}
+                  <a href="{{ .RelPermalink }}" target="_blank" rel="noopener">
+                    <!-- hero/document-duplicate -->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 16.5H6.75A2.25 2.25 0 0 1 4.5 14.25V6.75A2.25 2.25 0 0 1 6.75 4.5h7.5A2.25 2.25 0 0 1 16.5 6.75V8M8.25 9.75h7.5m-7.5 3h7.5M9.75 19.5h7.5A2.25 2.25 0 0 0 19.5 17.25v-7.5A2.25 2.25 0 0 0 17.25 7.5h-7.5A2.25 2.25 0 0 0 7.5 9.75v7.5A2.25 2.25 0 0 0 9.75 19.5z"/></svg>
+                    Cite
                   </a>
                 {{ end }}
-                
-                <!-- DOI link with Academicons 'doi' icon - FIXED ACCESS -->
-                {{ with $params.hugoblox.ids.doi }}
-                  <a href="https://doi.org/{{ . }}" target="_blank" rel="noopener" class="hover:text-primary-600 dark:hover:text-primary-400">
-                    <i class="ai ai-doi mr-1"></i>DOI
+
+                {{/* 3) DOI (handles multiple param shapes) */}}
+                {{ $doi := "" }}
+                {{ if $params.doi }}                     {{ $doi = $params.doi }}                {{ end }}
+                {{ if and (not $doi) ($params.hugoblox) }}
+                  {{ with $params.hugoblox.id.doi }}     {{ $doi = . }}                           {{ end }}
+                  {{ with $params.hugoblox.ids.doi }}    {{ $doi = . }}                           {{ end }}
+                {{ end }}
+                {{ with $doi }}
+                  <a href="https://doi.org/{{ . }}" target="_blank" rel="noopener">
+                    <!-- academicons doi -->
+                    <i class="ai ai-doi" aria-hidden="true"></i>
+                    DOI
                   </a>
-                {{ else }}
-                  {{ with $params.doi }}
-                  <a href="https://doi.org/{{ . }}" target="_blank" rel="noopener" class="hover:text-primary-600 dark:hover:text-primary-400">
-                    <i class="ai ai-doi mr-1"></i>DOI
-                  </a>
+                {{ end }}
+
+                {{/* 4) Links list — icon per known type (case-insensitive) */}}
+                {{ range $lnk := $params.links }}
+                  {{ $name := lower (or $lnk.name "") }}
+                  {{ $url  := $lnk.url }}
+                  {{ if and $name $url }}
+                    {{ if eq $name "arxiv" }}
+                      <a href="{{ $url }}" target="_blank" rel="noopener">
+                        <i class="ai ai-arxiv" aria-hidden="true"></i> arXiv
+                      </a>
+                    {{ else if or (eq $name "pdf") (eq $name "paper") }}
+                      <a href="{{ $url }}" target="_blank" rel="noopener">
+                        <i class="far fa-file-pdf" aria-hidden="true"></i> PDF
+                      </a>
+                    {{ else if or (eq $name "url") (eq $name "website") (eq $name "link") }}
+                      <a href="{{ $url }}" target="_blank" rel="noopener">
+                        <!-- hero/link -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.06 7.94a.75.75 0 0 1 1.06 0l1.94 1.94a3.75 3.75 0 0 1 0 5.3l-2.12 2.12a3.75 3.75 0 0 1-5.3 0l-1.94-1.94a.75.75 0 1 1 1.06-1.06l1.94 1.94a2.25 2.25 0 0 0 3.18 0l2.12-2.12a2.25 2.25 0 0 0 0-3.18L14.12 9a.75.75 0 0 1 0-1.06z"/><path d="M10.94 16.06a.75.75 0 0 1-1.06 0L7.94 14.12a3.75 3.75 0 0 1 0-5.3l2.12-2.12a3.75 3.75 0 0 1 5.3 0l1.94 1.94a.75.75 0 0 1-1.06 1.06L14.3 7.76a2.25 2.25 0 0 0-3.18 0L9 9.88a2.25 2.25 0 0 0 0 3.18l1.94 1.94a.75.75 0 0 1 0 1.06z"/></svg>
+                        URL
+                      </a>
+                    {{ else if or (eq $name "code") (eq $name "github") }}
+                      <a href="{{ $url }}" target="_blank" rel="noopener">
+                        <i class="fab fa-github" aria-hidden="true"></i> Code
+                      </a>
+                    {{ else if or (eq $name "slides") (eq $name "talk") }}
+                      <a href="{{ $url }}" target="_blank" rel="noopener">
+                        <i class="far fa-file-powerpoint" aria-hidden="true"></i> Slides
+                      </a>
+                    {{ else }}
+                      <!-- Fallback label + hero/link -->
+                      <a href="{{ $url }}" target="_blank" rel="noopener">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.06 7.94a.75.75 0 0 1 1.06 0l1.94 1.94a3.75 3.75 0 0 1 0 5.3l-2.12 2.12a3.75 3.75 0 0 1-5.3 0l-1.94-1.94a.75.75 0 1 1 1.06-1.06l1.94 1.94a2.25 2.25 0 0 0 3.18 0l2.12-2.12a2.25 2.25 0 0 0 0-3.18L14.12 9a.75.75 0 0 1 0-1.06z"/><path d="M10.94 16.06a.75.75 0 0 1-1.06 0L7.94 14.12a3.75 3.75 0 0 1 0-5.3l2.12-2.12a3.75 3.75 0 0 1 5.3 0l1.94 1.94a.75.75 0 0 1-1.06 1.06L14.3 7.76a2.25 2.25 0 0 0-3.18 0L9 9.88a2.25 2.25 0 0 0 0 3.18l1.94 1.94a.75.75 0 0 1 0 1.06z"/></svg>
+                        {{ $lnk.name }}
+                      </a>
+                    {{ end }}
                   {{ end }}
                 {{ end }}
-                
-                <!-- Loop through 'links' array for arXiv, PDF, and URL -->
-                {{ range $params.links }}
-                  {{ if eq .name "arXiv" }}
-                    <a href="{{ .url }}" target="_blank" rel="noopener" class="hover:text-primary-600 dark:hover:text-primary-400">
-                      <i class="ai ai-arxiv mr-1"></i>arXiv
-                    </a>
-                  {{ else if eq .name "PDF" }}
-                    <a href="{{ .url }}" target="_blank" rel="noopener" class="hover:text-primary-600 dark:hover:text-primary-400">
-                      <i class="far fa-file-pdf mr-1"></i>PDF
-                    </a>
-                  {{ else if eq .name "URL" }}
-                    <a href="{{ .url }}" target="_blank" rel="noopener" class="hover:text-primary-600 dark:hover:text-primary-400">
-                      <i class="hi hi-link mr-1"></i>URL
-                    </a>
-                  {{ end }}
-                {{ end }}
+
               </div>
             </div>
           </div>
+
           {{ $counter = sub $counter 1 }}
         {{ end }}
       </div>
