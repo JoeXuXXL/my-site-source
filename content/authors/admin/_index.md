@@ -50,10 +50,10 @@ profiles:
   #   url: https://github.com/xiangling-xu
 
 interests:
-  - Quantum information
-  - Quantum foundations
-  - Operator algebras
-  - Noncommutatitive polynomial optimization
+  - Quantum Information
+  - Quantum Foundations
+  - Operator Algebras
+  - Noncommutative Polynomial Optimization
 
 # education:
   # - area: PhD Infomatique
@@ -61,7 +61,7 @@ interests:
   #   date_start: 2023-10-01
   #   date_end: ''
     # summary: |
-    #   Thesis on _Scaling Laws for Neural Language Models_. Supervised by Prof. Andrew Ng. Published 5 papers in NeurIPS and ICML, with 2 best paper awards.
+    #   Thesis..
     # button:
     #   text: 'Read Thesis'
     #   url: 'https://example.com/thesis.pdf'
@@ -72,7 +72,7 @@ interests:
     # summary: |
     #   GPA: 5.69/6.00
 
-    #   Specialized in machine learning and robotics.
+    #   Student projects and research internship in algebraic quantum field theory, defomration quantization, and quantum information.
   # - area: BSc Mathematics and Physics
   #   institution: University of Toronto, Canada
   #   date_start: 2016-09-01
@@ -80,7 +80,7 @@ interests:
     # summary: |
     #   GPA: 3.95/4.00
 
-    #   Minored in Mathematics. President of AI Club.
+    #   Student projects and research internship in noncommutative geometry, cosmological large-scale structure, optical simulation, and biomechanical simulation.
 
 # work:
 #   - position: Senior AI Research Scientist
@@ -172,10 +172,8 @@ interests:
 #       Recognized for contributions to scaling laws in deep learning.
 ---
 
-I am a **mathematical physicist** working in quantum information theory and quantum foundations.
+I am a *mathematical physicist* working in quantum information theory and quantum foundations. My research focuses on quantum network correlations, many-body physics, and quantum cryptography, using tools from operator algebras and noncommutative polynomial optimization.
 
-My research focuses on quantum network correlations, many-body physics, quantum cryptography, and related topics in quantum mechanics, using tools from operator algebras and noncommutative polynomial optimization. 
+Since October 2023, I have been a PhD student with [PhiQus](https://team.inria.fr/phiqus/) at Inria Paris-Saclay, supervised by [Marc-Olivier Renou](https://marcolivierrenou.com/).
 
-Since October 2023, I have been a PhD student with the PhiQus team at Inria Paris-Saclay, supervised by Prof. Marc-Olivier Renou.
-
-Feel free to reach me at *xu[dot]xiangling[at]inria[dot]fr*.
+Feel free to reach me at *xu[dot]xiangling[at]inria[dot]fr* or check out my CV in the navigation bar.
