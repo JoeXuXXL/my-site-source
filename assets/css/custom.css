@@ -32,7 +32,7 @@
     background-color: #1f2937; /* A dark blue-gray */
 }
 
-/* Reduces the top padding for any section with the 'compact-section-top' class */
+/* Reduces the top padding for any section with the 'compact-section-top' class, for education in the homepage*/
 .compact-section-top {
-  padding-top: 0rem !important; /* The default is usually 6rem */
+  padding-top: -5rem !important; /* The default is usually 6rem */
 }
