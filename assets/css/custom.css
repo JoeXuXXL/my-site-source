@@ -25,5 +25,6 @@
 /* assets/css/custom.css */
 /* Reduces the top padding for any section with the 'compact-section-top' class, for education in the homepage*/
 .compact-section-top {
-  padding-top: -15rem !important; /* The default is usually 6rem */
+  /* Use padding instead of margin for a more stable layout */
+  padding-top: 0 !important; 
 }
