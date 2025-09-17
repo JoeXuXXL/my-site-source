@@ -28,7 +28,7 @@ publishDate: '2025-07-17'
 authors:
   - admin
 
-tags: [Bipartite compiled games, quantitative quantum soundness, sequential NPA hierarchy]
+tags: [Quantum cryptography]
 
 # Is this a featured talk? (true/false)
 featured: false
@@ -113,7 +113,7 @@ This talk has been presented at multiple venues. The date above is set to the mo
     class="tight-cap"
     src="iwota2025.jpg"
     alt="IWOTA 2025 at Twente, Netherland"
-    caption="Image credit: **IWOTA 2025 at Twente, Netherland**"
+    caption="Image credit: *IWOTA 2025 at Twente, Netherland*"
     link="iwota2025.jpg"
     width="650"
 >}}

@@ -28,7 +28,7 @@ publishDate: '2024-09-18'
 authors:
   - admin
 
-tags: [Bilocal network, generalized NPA hierarchy, scalar extension, bilocal factorisation]
+tags: [Quantum network nonlocality]
 
 # Is this a featured talk? (true/false)
 featured: false
@@ -116,7 +116,7 @@ This talk has been presented at multiple venues. The date above is set to the mo
     class="tight-cap"
     src="WAQ_4_Nov.png"
     alt="WAQ (We are quantum) at Paris, France"
-    caption="Image credit: **WAQ (We are quantum) at Paris, France"
+    caption="Image credit: *WAQ (We are quantum) at Paris, France*"
     link="WAQ_4_Nov.png"
     width="650"           
 >}}
@@ -125,7 +125,7 @@ This talk has been presented at multiple venues. The date above is set to the mo
     class="tight-cap"
     src="YQIS_6_Nov.png"
     alt="YQIS24 at Paris, France"
-    caption="Image credit: **YQIS24 at Paris, France**"
+    caption="Image credit: *YQIS24 at Paris, France*"
     link="YQIS_6_Nov.png"
     width="650"
 >}}

@@ -1,5 +1,5 @@
 ---
-title: Talks and event participation
+title: Talks and others
 type: page
 cms_exclude: true
 #url: talk

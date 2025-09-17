@@ -12,22 +12,22 @@ title: Organization and other participation
 #   postcode: ''
 #   country: ''
 
-summary: Be one of the organizers, or just a simple participant of some fun conferences.
+summary: Be one of the organizers, or just a simple participant of some fun conferences :)
 abstract: ''
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: '2024-06-01'
+date: '2024-06-03'
 # date_end: '2030-06-01T15:00:00Z'
 all_day: true
 
 # Schedule page publish date (NOT talk date).
-publishDate: '2024-06-01'
+publishDate: '2024-06-03'
 
 authors:
   - admin
 
-tags: [Bipartite compiled games, quantitative quantum soundness, sequential NPA hierarchy]
+tags: [Random]
 
 # Is this a featured talk? (true/false)
 featured: false
@@ -53,64 +53,31 @@ slides: ""
 projects: []
 ---
 
-<div class="talk-multi-venues">
+## Organization
 
-<style>
-/* Smaller inline footnote refs (beats .prose defaults) */
-.prose .talk-multi-venues sup.footnote-ref,
-.prose .talk-multi-venues sup > a[role="doc-noteref"],
-.prose .talk-multi-venues a[role="doc-noteref"] {
-  font-size: 0.70em !important;
-  line-height: 1;
-  text-decoration: none;
-}
-
-/* Footnotes list at bottom: smaller + muted */
-.prose .talk-multi-venues section.footnotes,
-.prose .talk-multi-venues .footnotes {
-  font-size: 0.80rem !important;   /* adjust to taste */
-  color: #6b7280;                   /* gray-500 */
-}
-.prose .talk-multi-venues section.footnotes hr,
-.prose .talk-multi-venues .footnotes hr { display: none; }
-
-/* tighten just figures you mark with class="tight-cap" */
-.prose figure.tight-cap figcaption { margin-top: .25rem !important; }
-.prose figure.tight-cap figcaption p { margin: .125rem 0 0 0 !important; }
-
-</style>
-
-<!-- <p class="text-sm text-gray-500 dark:text-gray-400">
-This talk has been presented at multiple venues. The date above is set to the most recent instance for correct ordering in the Talks list. Materials (slides/poster) are shared with minor venue-specific tweaks.
-</p> -->
-
-# Talks
-| Date | Event | Host / Location | Type |
-|---|---|---|---|
-| 2024-09 | **YQIS25**[^yqis] | ICFO, Castelldefels (ES) | Contributed |
-| 2025-07 | **IWOTA 2025**[^iwota] | University of Twente, Twente (NL) | Contributed |
-| 2025-06 | **IQC-PCQT-Quantum Saclay Workshop**[^saclay] | Sorbonne University, Paris (FR) | Invited |
-
-<!-- # Poster sessions
-| Date | Event | Host / Location |
-|---|---|---|
-| 2024-11 | **YQIS24**[^yqis] | Inria Paris, Paris (FR) |
-| 2024-11 | **GDR TeQ 2024**[^gdr] | Sorbonne University, Paris (FR) | -->
-
-*Also presented at various internal group meetings during research visits.*
+- [828. WE-Heraeus Seminar: Operator Theory and Polynomial Optimization in Quantum Information Theory](https://indico.we-heraeus-stiftung.de/event/13/) — Bad Honnef, Germany. *Co-organizer.*
+- [Gaspard Monge Visiting Professor Seminar Series — Igor Klep](https://project.inria.fr/gmvpseminars/) — Inria Saclay, Palaiseau, France. *Co-organizer.*
+- [COMPUTE (Quantera)](https://project.inria.fr/compute/) — project activities. *Co-organizer.*
+- Saclay Quantum Seminar — Sep 2023 session on the NPA hierarchy, Inria Saclay, Palaiseau, France. *Co-organizer.*
 
 
-{{< figure
-    src="iwota2025.jpg"
-    alt="IWOTA 2025 at Twente, Netherland"
-    caption="Image credit: **IWOTA 2025 at Twente, Netherland**"
-    link="iwota2025.jpg"
-    width="650"
->}}
+## Participation
 
+- [Vienna Quantum Foundations Conference 2024](https://vqf.iqoqi.oeaw.ac.at) — Vienna, Austria.
+- [POP23 — Future Trends in Polynomial Optimization](https://homepages.laas.fr/henrion/pop23/) — Toulouse, France.
 
-[^yqis]: <https://www.icfo.eu/event/4000/8th-international-conference-for-young-quantum-information-scientists-yqis25-/>
-[^iwota]: <https://www.utwente.nl/en/iwota2025/>
-[^saclay]: <https://project.inria.fr/iqcpcqtqsworkshop/>
+---
 
-</div>
+<!-- ### Photos
+
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 my-4">
+  <figure class="text-center">
+    <img src="photo1.jpg" alt="Event photo 1" loading="lazy" class="mx-auto rounded-xl shadow max-w-md w-full">
+    <figcaption class="text-xs text-gray-500 mt-1">Image credit: <strong>your name</strong></figcaption>
+  </figure>
+  <figure class="text-center">
+    <img src="photo2.jpg" alt="Event photo 2" loading="lazy" class="mx-auto rounded-xl shadow max-w-md w-full">
+    <figcaption class="text-xs text-gray-500 mt-1">Image credit: <strong>your name</strong></figcaption>
+  </figure>
+  <!-- Add more figures as needed -->
+</div> -->

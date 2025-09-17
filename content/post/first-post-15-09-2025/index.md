@@ -12,7 +12,7 @@ authors:
   - admin
 
 tags:
-  - Trivia
+  - Random
 
 content_meta:
   trending: false
