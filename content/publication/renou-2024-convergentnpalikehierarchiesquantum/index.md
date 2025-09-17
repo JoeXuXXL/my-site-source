@@ -27,5 +27,5 @@ links:
 - name: URL
   url: https://arxiv.org/abs/2210.09065
 - name: Slides
-  url: https://xiangling-xu.github.io/conference/bilocal_npa/
+  url: https://xiangling-xu.github.io/conference/bilocal-npa/
 ---

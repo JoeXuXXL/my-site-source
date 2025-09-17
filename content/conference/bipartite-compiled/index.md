@@ -104,7 +104,15 @@ This talk has been presented at multiple venues. The date above is set to the mo
 
 *Also presented at various internal group meetings during research visits.*
 
-![IWOTA 2025 at Twente, Netherland](iwota2025.jpg)
+
+{{< figure
+    src="iwota2025.jpg"
+    alt="IWOTA 2025 at Twente, Netherland"
+    caption="Image credit: **IWOTA 2025 at Twente, Netherland**"
+    link="iwota2025.jpg"
+    width="650"
+>}}
+
 
 [^yqis]: <https://www.icfo.eu/event/4000/8th-international-conference-for-young-quantum-information-scientists-yqis25-/>
 [^iwota]: <https://www.utwente.nl/en/iwota2025/>

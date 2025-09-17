@@ -107,9 +107,22 @@ This talk has been presented at multiple venues. The date above is set to the mo
 
 *Also presented at various internal group meetings during research visits.*
 
-![WAQ (We are quantum) at Paris, France](WAQ_4_Nov.png)
+{{< figure
+    src="WAQ_4_Nov.png"
+    alt="WAQ (We are quantum) at Paris, France"
+    caption="Image credit: **WAQ (We are quantum) at Paris, France"
+    link="WAQ_4_Nov.png"     # click to open full size (optional)
+    width="650"              # tweak size (optional)
+>}}
 
-![YQIS24 at Paris, France](YQIS_6_Nov.png)
+{{< figure
+    src="YQIS_6_Nov.png"
+    alt="YQIS24 at Paris, France"
+    caption="Image credit: **YQIS24 at Paris, France**"
+    link="YQIS_6_Nov.png"
+    width="650"
+>}}
+
 
 
 [^cw]: <https://events.perimeterinstitute.ca/event/69/>
