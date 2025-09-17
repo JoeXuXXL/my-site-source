@@ -33,7 +33,7 @@ tags: [Random]
 featured: false
 
 image:
-  caption: 'Image credit: [**828. WE-Heraeus-Seminar, Bad Honnef, Germany**]()'
+  caption: 'Image credit: [**My Huawei MateX3 at Aussios mini workshop**]()'
   focal_point: Right
 
 links:
@@ -63,21 +63,23 @@ projects: []
 
 ## Participation
 
+- [Summer 2025 Aussois Mini Workshop, Aussois, France](https://vqf.iqoqi.oeaw.ac.at) — Vienna, Austria.
 - [Vienna Quantum Foundations Conference 2024](https://vqf.iqoqi.oeaw.ac.at) — Vienna, Austria.
 - [POP23 — Future Trends in Polynomial Optimization](https://homepages.laas.fr/henrion/pop23/) — Toulouse, France.
 
 ---
 
-<!-- ### Photos
+
+### Photos
 
 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 my-4">
   <figure class="text-center">
-    <img src="photo1.jpg" alt="Event photo 1" loading="lazy" class="mx-auto rounded-xl shadow max-w-md w-full">
-    <figcaption class="text-xs text-gray-500 mt-1">Image credit: <strong>your name</strong></figcaption>
+    <img src="aussois_group.jpg" alt="Event photo 1" loading="lazy" class="mx-auto rounded-xl shadow max-w-md w-full">
+    <figcaption class="text-xs text-gray-500 mt-1">Image credit: <em>My Huawei MateX3 at Aussios, France</em></figcaption>
   </figure>
   <figure class="text-center">
-    <img src="photo2.jpg" alt="Event photo 2" loading="lazy" class="mx-auto rounded-xl shadow max-w-md w-full">
-    <figcaption class="text-xs text-gray-500 mt-1">Image credit: <strong>your name</strong></figcaption>
+    <img src="WEH_828_2.jpg" alt="Event photo 2" loading="lazy" class="mx-auto rounded-xl shadow max-w-md w-full">
+    <figcaption class="text-xs text-gray-500 mt-1">Image credit: <em>828. WE-Heraeus-Seminar, Bad Honnef, Germany</em></figcaption>
   </figure>
   <!-- Add more figures as needed -->
-</div> -->
+</div>
