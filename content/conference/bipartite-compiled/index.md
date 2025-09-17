@@ -83,13 +83,17 @@ projects: []
 .prose .talk-multi-venues section.footnotes hr,
 .prose .talk-multi-venues .footnotes hr { display: none; }
 
+/* tighten just figures you mark with class="tight-cap" */
+.prose figure.tight-cap figcaption { margin-top: .25rem !important; }
+.prose figure.tight-cap figcaption p { margin: .125rem 0 0 0 !important; }
+
 </style>
 
 <p class="text-sm text-gray-500 dark:text-gray-400">
 This talk has been presented at multiple venues. The date above is set to the most recent instance for correct ordering in the Talks list. Materials (slides/poster) are shared with minor venue-specific tweaks.
 </p>
 
-# Talks
+### Talks
 | Date | Event | Host / Location | Type |
 |---|---|---|---|
 | 2024-09 | **YQIS25**[^yqis] | ICFO, Castelldefels (ES) | Contributed |
@@ -106,6 +110,7 @@ This talk has been presented at multiple venues. The date above is set to the mo
 
 
 {{< figure
+    class="tight-cap"
     src="iwota2025.jpg"
     alt="IWOTA 2025 at Twente, Netherland"
     caption="Image credit: **IWOTA 2025 at Twente, Netherland**"
