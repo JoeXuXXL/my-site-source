@@ -33,7 +33,7 @@ tags: [Random]
 featured: false
 
 image:
-  caption: 'Image credit: [**My Huawei MateX3 at Aussios mini workshop**]()'
+  caption: 'Image credit: [**My AWESOME Huawei MateX3 at Aussios mini workshop**]()'
   focal_point: Right
 
 links:
@@ -53,7 +53,7 @@ slides: ""
 projects: []
 ---
 
-## Organization
+### Organization
 
 - [828. WE-Heraeus Seminar: Operator Theory and Polynomial Optimization in Quantum Information Theory](https://indico.we-heraeus-stiftung.de/event/13/) — Bad Honnef, Germany. *Co-organizer.*
 - [Gaspard Monge Visiting Professor Seminar Series — Igor Klep](https://project.inria.fr/gmvpseminars/) — Inria Saclay, Palaiseau, France. *Co-organizer.*
@@ -61,7 +61,7 @@ projects: []
 - Saclay Quantum Seminar — Sep 2023 session on the NPA hierarchy, Inria Saclay, Palaiseau, France. *Co-organizer.*
 
 
-## Participation
+### Participation
 
 - [Summer 2025 Aussois Mini Workshop, Aussois, France](https://vqf.iqoqi.oeaw.ac.at) — Vienna, Austria.
 - [Vienna Quantum Foundations Conference 2024](https://vqf.iqoqi.oeaw.ac.at) — Vienna, Austria.
@@ -72,14 +72,29 @@ projects: []
 
 ### Photos
 
-<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 my-4">
+
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 my-6">
   <figure class="text-center">
-    <img src="aussois_group.jpg" alt="Event photo 1" loading="lazy" class="mx-auto rounded-xl shadow max-w-md w-full">
-    <figcaption class="text-xs text-gray-500 mt-1">Image credit: <em>My Huawei MateX3 at Aussios, France</em></figcaption>
+    <a href="aussois_group.jpg" target="_blank" rel="noopener" class="block">
+      <img src="aussois_group.jpg"
+           alt="Aussios (Aussois) group photo"
+           loading="lazy"
+           class="w-full h-auto rounded-2xl shadow-lg">
+    </a>
+    <figcaption class="text-xs text-gray-500 mt-2">
+      Image credit: <em>My Huawei Mate X3 at Aussois, France</em>
+    </figcaption>
   </figure>
+
   <figure class="text-center">
-    <img src="WEH_828_2.jpg" alt="Event photo 2" loading="lazy" class="mx-auto rounded-xl shadow max-w-md w-full">
-    <figcaption class="text-xs text-gray-500 mt-1">Image credit: <em>828. WE-Heraeus-Seminar, Bad Honnef, Germany</em></figcaption>
+    <a href="WEH_828_2.jpg" target="_blank" rel="noopener" class="block">
+      <img src="WEH_828_2.jpg"
+           alt="WE-Heraeus 828, Bad Honnef"
+           loading="lazy"
+           class="w-full h-auto rounded-2xl shadow-lg">
+    </a>
+    <figcaption class="text-xs text-gray-500 mt-2">
+      Image credit: <em>828. WE-Heraeus-Seminar, Bad Honnef, Germany</em>
+    </figcaption>
   </figure>
-  <!-- Add more figures as needed -->
 </div>

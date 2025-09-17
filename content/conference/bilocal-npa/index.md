@@ -111,6 +111,7 @@ This talk has been presented at multiple venues. The date above is set to the mo
 | 2024-11 | **GDR TeQ 2024**[^gdr] | Sorbonne University, Paris (FR) |
 
 *Also presented at various internal group meetings during research visits.*
+---
 
 {{< figure
     class="tight-cap"
