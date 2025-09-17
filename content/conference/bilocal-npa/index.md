@@ -111,8 +111,8 @@ This talk has been presented at multiple venues. The date above is set to the mo
     src="WAQ_4_Nov.png"
     alt="WAQ (We are quantum) at Paris, France"
     caption="Image credit: **WAQ (We are quantum) at Paris, France"
-    link="WAQ_4_Nov.png"     # click to open full size (optional)
-    width="650"              # tweak size (optional)
+    link="WAQ_4_Nov.png"
+    width="650"           
 >}}
 
 {{< figure
